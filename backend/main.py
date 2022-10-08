@@ -37,7 +37,7 @@ def count_all_students():
     count = coll1.count_documents(filter={})
     print(count)
 
-# count_all_students()
+#count_all_students()
 
 # def get_score_range(min_score, max_score):
 #    # query = coll1.find({"scores": {"score": 87.50309579619501}})
@@ -55,5 +55,15 @@ def count_all_students():
 #         # print("1")
     
 # get_score_range(1.0,100.0)
+
+class_id = 29
+#Get list of students in any specific class
+def find_students_in_class():
+    students = coll1.find({"class_id": class_id})
+
+    for itr in students:
+        printer.pprint(itr)
+
+find_students_in_class()
 
 
