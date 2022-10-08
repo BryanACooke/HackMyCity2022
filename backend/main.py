@@ -57,13 +57,24 @@ def count_all_students():
 # get_score_range(1.0,100.0)
 
 class_id = 29
-#Get list of students in any specific class
-def find_students_in_class():
+#Search students by class 
+def search_students_by_class():
     students = coll1.find({"class_id": class_id})
 
     for itr in students:
         printer.pprint(itr)
 
-find_students_in_class()
+#Search students by id
+student_id = 45
+class_id_sid = 13
+#Get list of students in any specific class
+def search_students_by_id():
+    students = coll1.find({"student_id": student_id, "class_id": class_id_sid})
+
+    for itr in students:
+        printer.pprint(itr)
+
+#search_students_by_class()
+search_students_by_id() 
 
 
