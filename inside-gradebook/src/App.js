@@ -1,5 +1,6 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {Button} from 'react-bootstrap';
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         </div>
       </div>
       <div className="rightSide">
+        <div className="rightSideContent">
         <div className="contentTitle">
           <h1 className="mainTitle">InsideTheGradebook</h1>
           </div>
@@ -21,7 +23,12 @@ function App() {
                industry's standard dummy text ever since the 1500s, 
                when an unknown printer took a galley of type and scrambled
                 it to make a type specimen book. </p>
+                <Button className="letsGoButton">Let's Go!</Button>
         </div>
+        
+        </div>
+
+
         </div>
     </div>
     </div>

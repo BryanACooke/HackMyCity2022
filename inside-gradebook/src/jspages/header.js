@@ -25,7 +25,7 @@ function Header(){
     <Nav.Link  className="fs-4 elementTabTwo"><Link to ="/mainDashboard">Dashboard</Link></Nav.Link> 
         </Form>
   <h1 class="navBreaker">|</h1>
-       <Navbar.Text id="textSignedInAs"><div id="bothTexts"><div id="firstText">Signed in as: </div><div id="break">John Doe
+       <Navbar.Text id="textSignedInAs"><div id="bothTexts"><div id="firstText">Signed in as: </div>Bryan Cooke<div id="break">
        <Link to="/UserProfile"></Link>
        </div> </div><Link to="/UserProfile"><div id="profilePicture">
        <img id="imgProfilePicture" src="https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png"

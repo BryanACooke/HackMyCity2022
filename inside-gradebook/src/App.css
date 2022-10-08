@@ -1,5 +1,11 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 86vh; 
+  width: 100vw;
 }
 
 .App-header {
@@ -14,10 +20,12 @@
 }
 
 .landingPageImage{
-  width: 500px;
-  height: 400px;
+  width: 40vw;
+  height: 50vh;
 }
+
 .landingImageDiv{
+  padding-right: 10vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,15 +44,25 @@
   font-size: 50px;
   font-weight: bold;
   color: black;
-  margin: 0px;
+  margin-bottom: 15px;
   padding: 0px;
 }
 
 .contentDetailedText{
   font-size: 16px;
-  width: 20vw;
+  width: 30vw;
   color: black;
   margin: 0px;
   padding: 0px; 
   text-align: justify;
+}
+
+.rightSideContent{
+  display: flex;
+  flex-direction: column;
+  margin-top: 13vh;
+}
+
+.letsGoButton{
+  
 }
