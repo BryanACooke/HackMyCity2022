@@ -2,6 +2,7 @@ import '../csspages/mainDashboard.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Button, Form} from 'react-bootstrap';
 import {React, useEffect, useState} from 'react'
+import {Link}   from 'react-router-dom';
 
 var gradeColors = {    "Red": "#FFC3BB",
                     "Yellow": "#F4DE90",
@@ -38,7 +39,10 @@ function MainDashboard() {
                         <img className="classLogoIcon" src="../imgres/icons8-calculator.gif" alt="Class Logo" />
                      </div>
                     <div className="classTextDiv">
+                    <Link to='/mainDashBoard'>
                         <h1 className="classText">Calculus 1</h1>
+                        </Link>
+                        
                      </div>
                      </div>
 

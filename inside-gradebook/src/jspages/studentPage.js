@@ -1,5 +1,6 @@
 import '../csspages/studentpage.css'
 import {Button} from 'react-bootstrap'
+import {DataChart, LineChart} from '../jspages/Datachart'
 
 
 
@@ -37,6 +38,7 @@ function StudentPage(){
             </div>
 
             <div className="printStudentReport">
+                
                 <Button className="printStudentReportButton">Print Student Report</Button>
             </div>
 
@@ -46,11 +48,17 @@ function StudentPage(){
       </div>
 
         <div className="studentPageRightSide">  
+        <div class="chart-container">
+            <LineChart/>
+            </div>
             <div className="studentPageRightContent">
+            
+
+                <div className="assignmentTableList">
                 <div className="assignmentTableTitle">
                     <h1 className="assignmentTableTitleText">Assignments</h1>
                 </div>
-                <div className="assignmentTableList">
+
                     <table className="assignmentTable">
                         <tr>
                             <th>Assignment</th>

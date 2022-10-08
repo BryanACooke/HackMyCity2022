@@ -229,5 +229,26 @@
     width: 50vw;
     height: 70px;
     border-bottom: 1px solid #e5e5e5;
-    
 }
+
+.classTextButton{
+    outline: 0;
+    background-color: transparent;
+    color: black;
+    border: 0;
+}
+.classTextButton:hover{
+    outline: 0;
+    color: black;
+    background-color: transparent;
+    border: 0;
+
+}
+.classTextButton:active{
+    outline: 0;
+    color: black;
+    background-color: transparent;
+    border: 0;
+
+}
+
