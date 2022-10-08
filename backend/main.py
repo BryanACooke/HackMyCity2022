@@ -1,3 +1,4 @@
+import pprint
 from pymongo import MongoClient
 from bson import json_util
 
@@ -15,3 +16,15 @@ db = client[DB_NAME]
 coll1 = db[COLLECTION_NAME] #selecting the coll1 in myDatabase
 for document in coll1.find():
     print (document)
+
+printer = pprint.PrettyPrinter()
+
+def find_all_students():
+     students = coll1.find() 
+
+     for student in students:
+         printer.pprint(student)
+
+find_all_students()
+
+
