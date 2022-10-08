@@ -3,10 +3,10 @@
 	"Name": "Quiz 1"
 	"Keyword": "Addition"
 	"ClassID": 1
-	"GradeID" : {
-		"1"
-		"2"
-	}
+	"GradeID" : [
+		1,
+		2
+	]
 	"Weight": 4
 	
 }
@@ -15,10 +15,10 @@
 	"Name": "Assignment 1"
 	"Keyword": "Addition"
 	"ClassID": 1
-	"GradeID" : {
-		"3"
-		"4"
-	}
+	"GradeID" : [
+		3,
+		4
+	]
 	"Weight": 10
 	
 }
@@ -27,10 +27,10 @@
 	"Name": "Quiz 2"
 	"Keyword": "Multiplication"
 	"ClassID": 1
-	"GradeID" : {
-		"5"
-		"6"
-	}
+	"GradeID" : [
+		5,
+		6
+	]
 	"Weight": 4
 	
 }
@@ -39,10 +39,10 @@
 	"Name": "Assignment 2"
 	"Keyword": "Multiplication"
 	"ClassID": 1
-	"GradeID" : {
-		"7"
-		"8"
-	}
+	"GradeID" : [
+		7,
+		8
+	]
 	"Weight": 10
 	
 }
@@ -51,11 +51,11 @@
 	"Name": "Quiz 1"
 	"Keyword": "Geology"
 	"ClassID": 2
-	"GradeID" : {
-		"9"
-		"10"
-		"11"
-	}
+	"GradeID" : [
+		9,
+		10,
+		11
+	]
 	"Weight": 4
 	
 }
@@ -64,10 +64,10 @@
 	"Name": "Quiz 1"
 	"Keyword": "Verbs"
 	"ClassID": 3
-	"GradeID" : {
-		"12"
-		"13"
-	}
+	"GradeID" : [
+		12,
+		13
+	]
 	"Weight": 8
 	
 }
@@ -75,11 +75,11 @@
 	"Name": "Quiz 1"
 	"Keyword": "Enlightenment"
 	"ClassID": 4
-	"GradeID" : {
-		"14"
-		"15"
-		"16"
-	}
+	"GradeID" : [
+		14,
+		15,
+		16
+	]
 	"Weight": 4
 	
 }
@@ -87,11 +87,11 @@
 	"Name": "Quiz 2"
 	"Keyword": "American Revolution"
 	"ClassID": 4
-	"GradeID" : {
-		"17"
-		"18"
-		"19"
-	}
+	"GradeID" : [
+		17,
+		18,
+		19
+	]
 	"Weight": 4
 	
 }
