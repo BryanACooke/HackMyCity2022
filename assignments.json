@@ -1,97 +1,99 @@
 {
-	"_id": 1
-	"Name": "Quiz 1"
-	"Keyword": "Addition"
-	"ClassID": 1
+	"_id": 1,
+	"Name": "Quiz 1",
+	"Keyword": "Addition",
+	"ClassID": 1,
 	"GradeID" : [
 		1,
 		2
-	]
+	],
 	"Weight": 4
 	
-}
+},
 {
-	"_id": 2
-	"Name": "Assignment 1"
-	"Keyword": "Addition"
-	"ClassID": 1
+	"_id": 2,
+	"Name": "Assignment 1",
+	"Keyword": "Addition",
+	"ClassID": 1,
 	"GradeID" : [
 		3,
 		4
-	]
+	],
 	"Weight": 10
 	
-}
+},
 {
-	"_id": 3
-	"Name": "Quiz 2"
-	"Keyword": "Multiplication"
-	"ClassID": 1
+	"_id": 3,
+	"Name": "Quiz 2",
+	"Keyword": "Multiplication",
+	"ClassID": 1,
 	"GradeID" : [
 		5,
 		6
-	]
+	],
 	"Weight": 4
 	
-}
+},
 {
-	"_id": 4
-	"Name": "Assignment 2"
-	"Keyword": "Multiplication"
-	"ClassID": 1
+	"_id": 4,
+	"Name": "Assignment 2",
+	"Keyword": "Multiplication",
+	"ClassID": 1,
 	"GradeID" : [
 		7,
 		8
-	]
+	],
 	"Weight": 10
 	
-}
+},
 {
-	"_id": 5
-	"Name": "Quiz 1"
-	"Keyword": "Geology"
-	"ClassID": 2
+	"_id": 5,
+	"Name": "Quiz 1",
+	"Keyword": "Geology",
+	"ClassID": 2,
 	"GradeID" : [
 		9,
 		10,
 		11
-	]
+	],
 	"Weight": 4
 	
-}
+},
 {
 	"_id": 6
-	"Name": "Quiz 1"
-	"Keyword": "Verbs"
-	"ClassID": 3
+	"Name": "Quiz 1",
+	"Keyword": "Verbs",
+	"ClassID": 3,
 	"GradeID" : [
 		12,
 		13
-	]
+	],
 	"Weight": 8
 	
-}
-	"_id": 7
-	"Name": "Quiz 1"
-	"Keyword": "Enlightenment"
-	"ClassID": 4
+},
+{
+	"_id": 7,
+	"Name": "Quiz 1",
+	"Keyword": "Enlightenment",
+	"ClassID": 4,
 	"GradeID" : [
 		14,
 		15,
 		16
-	]
+	],
 	"Weight": 4
 	
-}
-	"_id": 8
-	"Name": "Quiz 2"
-	"Keyword": "American Revolution"
-	"ClassID": 4
+},
+{
+	"_id": 8,
+	"Name": "Quiz 2",
+	"Keyword": "American Revolution",
+	"ClassID": 4,
 	"GradeID" : [
 		17,
 		18,
 		19
-	]
+	],
 	"Weight": 4
 	
 }
