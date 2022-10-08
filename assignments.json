@@ -9,7 +9,7 @@
 	],
 	"Weight": 4
 	
-},
+}
 {
 	"_id": 2,
 	"Name": "Assignment 1",
@@ -21,7 +21,7 @@
 	],
 	"Weight": 10
 	
-},
+}
 {
 	"_id": 3,
 	"Name": "Quiz 2",
@@ -33,7 +33,7 @@
 	],
 	"Weight": 4
 	
-},
+}
 {
 	"_id": 4,
 	"Name": "Assignment 2",
@@ -45,7 +45,7 @@
 	],
 	"Weight": 10
 	
-},
+}
 {
 	"_id": 5,
 	"Name": "Quiz 1",
@@ -58,9 +58,9 @@
 	],
 	"Weight": 4
 	
-},
+}
 {
-	"_id": 6
+	"_id": 6,
 	"Name": "Quiz 1",
 	"Keyword": "Verbs",
 	"ClassID": 3,
@@ -70,7 +70,7 @@
 	],
 	"Weight": 8
 	
-},
+}
 {
 	"_id": 7,
 	"Name": "Quiz 1",
@@ -83,7 +83,7 @@
 	],
 	"Weight": 4
 	
-},
+}
 {
 	"_id": 8,
 	"Name": "Quiz 2",

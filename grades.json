@@ -4,126 +4,126 @@
 	"StudentID": 2,
 	"Score" : 64
 	
-},
+}
 {
 	"_id": 2,
 	"AssignmentID": 1,
 	"StudentID": 3,
 	"Score" : 100
 	
-},
+}
 {
 	"_id": 3,
 	"AssignmentID": 2,
 	"StudentID": 2,
 	"Score" : 25
 	
-},
+}
 {
 	"_id": 4,
 	"AssignmentID": 2,
 	"StudentID": 3,
 	"Score" : 97
 	
-},
+}
 {
 	"_id": 5,
 	"AssignmentID": 3,
 	"StudentID": 2,
 	"Score" : 89
 	
-},
+}
 {
 	"_id": 6,
 	"AssignmentID": 3,
 	"StudentID": 3,
 	"Score" : 85
 	
-},
+}
 {
 	"_id": 7,
 	"AssignmentID": 4,
 	"StudentID": 2,
 	"Score" : 73
 	
-},
+}
 {
 	"_id": 8,
 	"AssignmentID": 4,
 	"StudentID": 3,
 	"Score" : 100
 	
-},
+}
 {
 	"_id": 9,
 	"AssignmentID": 5,
 	"StudentID": 3,
 	"Score" : 100
 	
-},
+}
 {
 	"_id": 10,
 	"AssignmentID": 5,
 	"StudentID": 4,
 	"Score" : 81
 	
-},
+}
 {
 	"_id": 11,
 	"AssignmentID": 5,
 	"StudentID": 5,
 	"Score" : 63
 	
-},
+}
 {
 	"_id": 12,
 	"AssignmentID": 6,
 	"StudentID": 1,
 	"Score" : 92
 	
-},
+}
 {
 	"_id": 13,
 	"AssignmentID": 6,
 	"StudentID": 4,
 	"Score" : 45
 	
-},
+}
 {
 	"_id": 14,
 	"AssignmentID": 7,
 	"StudentID": 1,
 	"Score" : 83
 	
-},
+}
 {
 	"_id": 15,
 	"AssignmentID": 7,
 	"StudentID": 2,
 	"Score" : 98
 	
-},
+}
 {
 	"_id": 16,
 	"AssignmentID": 7,
 	"StudentID": 5,
 	"Score" : 62
 	
-},
+}
 {
 	"_id": 17,
 	"AssignmentID": 8,
 	"StudentID": 1,
 	"Score" : 100
 	
-},
+}
 {
 	"_id": 18,
 	"AssignmentID": 8,
 	"StudentID": 2,
 	"Score" : 46
 	
-},
+}
 {
 	"_id": 19,
 	"AssignmentID": 8,
