@@ -25,7 +25,7 @@ def find_all_students():
      for student in students:
          printer.pprint(student)
 
-#find_all_students()
+# find_all_students()
 
 def find_s43():
     tim = coll1.find_one({"student_id": 43, "class_id": 18})
@@ -38,4 +38,22 @@ def count_all_students():
     print(count)
 
 # count_all_students()
+
+# def get_score_range(min_score, max_score):
+#    # query = coll1.find({"scores": {"score": 87.50309579619501}})
+
+        
+#     # query = {"$and": [
+#     #     {"score": {"$gte": min_score}},
+#     #     {"score": {"$lte": max_score}}
+#     # ]}
+#     # print("x")
+#     # students = coll1.find(query).sort("score") 
+#     # print("2")
+#     # for studen:
+#     #     printer.pprint(student)
+#         # print("1")
+    
+# get_score_range(1.0,100.0)
+
 
