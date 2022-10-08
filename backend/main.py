@@ -28,7 +28,14 @@ def find_all_students():
 #find_all_students()
 
 def find_s43():
-    tim = coll1.find_one({"student_id": 43})
+    tim = coll1.find_one({"student_id": 43, "class_id": 18})
     printer.pprint(tim)
 
-find_s43()
+#find_s43()
+
+def count_all_students():
+    count = coll1.count_documents(filter={})
+    print(count)
+
+# count_all_students()
+
