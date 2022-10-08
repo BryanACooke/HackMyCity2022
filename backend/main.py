@@ -14,8 +14,8 @@ client = MongoClient("mongodb://127.0.0.1:27017/:27017")
 db = client[DB_NAME]
 
 coll1 = db[COLLECTION_NAME] #selecting the coll1 in myDatabase
-for document in coll1.find():
-    print (document)
+# for document in coll1.find():
+#     print (document)
 
 printer = pprint.PrettyPrinter()
 
@@ -25,6 +25,10 @@ def find_all_students():
      for student in students:
          printer.pprint(student)
 
-find_all_students()
+#find_all_students()
 
+def find_s43():
+    tim = coll1.find_one({"student_id": 43})
+    printer.pprint(tim)
 
+find_s43()
