@@ -2,17 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: white;
   min-height: 100vh;
@@ -24,4 +13,38 @@
   color: black;
 }
 
+.landingPageImage{
+  width: 500px;
+  height: 400px;
+}
+.landingImageDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+}
+
+
+.landingPage {
+  display: flex;
+  flex-direction: row; 
+  align-content: center;
+  justify-content: space-evenly;
+}
+
+.mainTitle{
+  font-size: 50px;
+  font-weight: bold;
+  color: black;
+  margin: 0px;
+  padding: 0px;
+}
+
+.contentDetailedText{
+  font-size: 16px;
+  width: 20vw;
+  color: black;
+  margin: 0px;
+  padding: 0px; 
+  text-align: justify;
+}
