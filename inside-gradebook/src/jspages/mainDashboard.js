@@ -1,5 +1,8 @@
 import '../csspages/mainDashboard.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {Button, Form} from 'react-bootstrap';
+import {React, useEffect, useState} from 'react'
+
 
 
 
@@ -56,8 +59,8 @@ function MainDashboard() {
                 
                 <div className="studentTemplateDiv">
                     <div className="studentGrade">
-                        <h1 className="studentGradeText">A</h1>
-                        <h2 className="studentGradeTextSubtitle">100%</h2>
+                        <h1 className="studentGradeText">F</h1>
+                        <h2 className="studentGradeTextSubtitle">42%</h2>
                     </div>
                     <div className="studentProfilePicture">
                         <img className="studentProfilePhoto" src="./imgres/bcookepfp.jpg" alt="Profile Picture" />
@@ -70,10 +73,10 @@ function MainDashboard() {
                     </div>
              <div className="studentRatingDiv">
                     <div className="studentRatingLogo">
-                        <img className="studentRatingLogoIcon" src="../imgres/icons8-checkmark.gif" alt="Rating Logo" />
+                        <img className="studentRatingLogoIcon" src="../imgres/icons8-error-96.png" alt="Rating Logo" />
                         </div>
                     <div className="studentRatingTextDiv">
-                        <h1 className="studentRatingText">On Track</h1>
+                        <h1 className="studentRatingText">Needs Attention</h1>
                     </div>
                 </div>
                 </div>
@@ -94,16 +97,13 @@ function MainDashboard() {
                     </div>
              <div className="studentRatingDiv">
                     <div className="studentRatingLogo">
-                        <img className="studentRatingLogoIcon" src="../imgres/icons8-checkmark.gif" alt="Rating Logo" />
+                        <img className="studentRatingLogoIcon" src="../imgres/icons8-error-96.png" alt="Rating Logo" />
                         </div>
                     <div className="studentRatingTextDiv">
-                        <h1 className="studentRatingText">On Track</h1>
+                        <h1 className="studentRatingText">Needs Attention</h1>
                     </div>
                 </div>
                 </div>
-
-
-
                 <div className="studentTemplateDiv">
                     <div className="studentGrade">
                         <h1 className="studentGradeText">A</h1>
@@ -120,20 +120,32 @@ function MainDashboard() {
                     </div>
              <div className="studentRatingDiv">
                     <div className="studentRatingLogo">
-                        <img className="studentRatingLogoIcon" src="../imgres/icons8-checkmark.gif" alt="Rating Logo" />
+                        <img className="studentRatingLogoIcon" src="../imgres/icons8-error-96.png" alt="Rating Logo" />
                         </div>
                     <div className="studentRatingTextDiv">
-                        <h1 className="studentRatingText">On Track</h1>
+                        <h1 className="studentRatingText">Needs Attention</h1>
                     </div>
                 </div>
                 </div>
+            </div>
             </div>
             
-            </div>
-
-            <div className="allStudentsList">
+           <div className="allStudentsList">
+           <div className="studentLists">
+            <div className="titleAndFormSearch">
                 <h1 className="allStudentsListTitle">All Students</h1>
-
+            <div className="formInputSearch">
+        <Form className="d-flex">
+            <Form.Control
+              type="search"
+              placeholder="Search"
+              className="me-2"
+              aria-label="Search"
+            />
+            <Button className="searchButtonStudents" variant="outline-success">Search</Button>
+          </Form>
+          </div>
+          </div>
                 <div className="studentTemplateDiv">
                     <div className="studentGrade">
                         <h1 className="studentGradeText">A</h1>
@@ -156,36 +168,63 @@ function MainDashboard() {
                         <h1 className="studentRatingText">On Track</h1>
                     </div>
                 </div>
-
-                <div className="studentTemplateDiv">
-                    <div className="studentGrade">
-                        <h1 className="studentGradeText">A</h1>
-                        <h2 className="studentGradeTextSubtitle">100%</h2>
-                    </div>
-                    <div className="studentProfilePicture">
-                        <img className="studentProfilePhoto" src="./imgres/bcookepfp.jpg" alt="Profile Picture" />
-                    </div>
-                    <div className="studentName">
-                        <h1 className="studentNameText">John Doe</h1>
-                        <div className="studentGradeLevel">
-                            <h1 className="studentGradeLevelText">Grade 12</h1>
-                        </div> 
-                    </div>
-             <div className="studentRatingDiv">
-                    <div className="studentRatingLogo">
-                        <img className="studentRatingLogoIcon" src="../imgres/icons8-checkmark.gif" alt="Rating Logo" />
-                        </div>
-                    <div className="studentRatingTextDiv">
-                        <h1 className="studentRatingText">On Track</h1>
-                    </div>
-                </div>
-                </div>
-                </div>
-
 
                 
+                </div>
 
+                <div className="studentTemplateDiv">
+                    <div className="studentGrade">
+                        <h1 className="studentGradeText">A</h1>
+                        <h2 className="studentGradeTextSubtitle">100%</h2>
+                    </div>
+                    <div className="studentProfilePicture">
+                        <img className="studentProfilePhoto" src="./imgres/bcookepfp.jpg" alt="Profile Picture" />
+                    </div>
+                    <div className="studentName">
+                        <h1 className="studentNameText">John Doe</h1>
+                        <div className="studentGradeLevel">
+                            <h1 className="studentGradeLevelText">Grade 12</h1>
+                        </div> 
+                    </div>
+             <div className="studentRatingDiv">
+                    <div className="studentRatingLogo">
+                        <img className="studentRatingLogoIcon" src="../imgres/icons8-checkmark.gif" alt="Rating Logo" />
+                        </div>
+                    <div className="studentRatingTextDiv">
+                        <h1 className="studentRatingText">On Track</h1>
+                    </div>
+                </div>
 
+                
+                </div>
+
+                <div className="studentTemplateDiv">
+                    <div className="studentGrade">
+                        <h1 className="studentGradeText">A</h1>
+                        <h2 className="studentGradeTextSubtitle">100%</h2>
+                    </div>
+                    <div className="studentProfilePicture">
+                        <img className="studentProfilePhoto" src="./imgres/bcookepfp.jpg" alt="Profile Picture" />
+                    </div>
+                    <div className="studentName">
+                        <h1 className="studentNameText">John Doe</h1>
+                        <div className="studentGradeLevel">
+                            <h1 className="studentGradeLevelText">Grade 12</h1>
+                        </div> 
+                    </div>
+             <div className="studentRatingDiv">
+                    <div className="studentRatingLogo">
+                        <img className="studentRatingLogoIcon" src="../imgres/icons8-checkmark.gif" alt="Rating Logo" />
+                        </div>
+                    <div className="studentRatingTextDiv">
+                        <h1 className="studentRatingText">On Track</h1>
+                    </div>
+                </div>
+
+                
+                </div>
+
+                </div>
             </div>
 
             </div>

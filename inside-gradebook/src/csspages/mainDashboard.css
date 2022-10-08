@@ -93,12 +93,16 @@
 .allStudentsList{
     display: flex;
     flex-direction: column;
-    align-items: space-between;
-    justify-content: space-between;
-    margin-top: 10px;
-    margin-left: 10vw;
+    
+    margin-top: 4vh;
     height: 70px;
 
+}
+
+.allStudentsListTitle{
+    padding: 10px 10px 10px 10px;
+    font-size: 35px;
+    overflow-y:scroll;
 }
 
 .studentAlertListTitle{
@@ -111,6 +115,24 @@
 
 }
 
+.formInputSearch{
+    width: 40%;
+}
+
+.searchButtonStudents{
+    width: 40%;
+
+
+}
+
+
+.titleAndFormSearch{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e5e5e5;
+}
 
 .studentLists{
     border: 1px solid #e5e5e5;
@@ -144,6 +166,9 @@
     padding: 10px 10px 10px 10px;
     margin-bottom: 10px;
     border-right: 1px solid #e5e5e5;
+    min-width: 60px;
+    
+    
 }
 .studentGradeText{
     font-size: 40px;
@@ -151,6 +176,7 @@
     text-align: center;
     margin-top: 5px;
     margin-bottom: 5px;
+    
 }
 .studentGradeTextSubtitle {
     font-size: 15px;
@@ -178,6 +204,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    
 }
 
 .studentRatingLogoIcon{
@@ -200,4 +227,5 @@
     width: 50vw;
     height: 70px;
     border-bottom: 1px solid #e5e5e5;
+    
 }
