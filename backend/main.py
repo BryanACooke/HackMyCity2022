@@ -74,7 +74,18 @@ def search_students_by_id():
     for itr in students:
         printer.pprint(itr)
 
+#Search students by assignment
+assignment_id = 5
+class_id_aid = 13
+#Get list of students in any specific class
+def search_students_by_assignments():
+    students = coll1.find({"assignment_id": assignment_id, "class_id": class_id_aid})
+
+    for itr in students:
+        printer.pprint(itr)
+
 #search_students_by_class()
-search_students_by_id() 
+#search_students_by_id() 
+#search_students_by_assignment()
 
 
