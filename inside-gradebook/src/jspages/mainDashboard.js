@@ -3,7 +3,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Button, Form} from 'react-bootstrap';
 import {React, useEffect, useState} from 'react'
 
-
+var gradeColors = {    "Red": "#FFC3BB",
+                    "Yellow": "#F4DE90",
+                    "Green": "#C3ECC7",
+};
 
 
 function MainDashboard() {
@@ -58,7 +61,7 @@ function MainDashboard() {
                 <h1 className="studentAlertListTitle">Student Alerts</h1>
                 
                 <div className="studentTemplateDiv">
-                    <div className="studentGrade">
+                    <div className="studentGrade" style={{backgroundColor: gradeColors.Red,  borderRadius: 4}}>
                         <h1 className="studentGradeText">F</h1>
                         <h2 className="studentGradeTextSubtitle">42%</h2>
                     </div>
@@ -82,7 +85,7 @@ function MainDashboard() {
                 </div>
 
                 <div className="studentTemplateDiv">
-                    <div className="studentGrade">
+                    <div className="studentGrade" style={{backgroundColor: gradeColors.Green,  borderRadius: 4}}>
                         <h1 className="studentGradeText">A</h1>
                         <h2 className="studentGradeTextSubtitle">100%</h2>
                     </div>
@@ -105,7 +108,7 @@ function MainDashboard() {
                 </div>
                 </div>
                 <div className="studentTemplateDiv">
-                    <div className="studentGrade">
+                    <div className="studentGrade" style={{backgroundColor: gradeColors.Green,  borderRadius: 4}}>
                         <h1 className="studentGradeText">A</h1>
                         <h2 className="studentGradeTextSubtitle">100%</h2>
                     </div>
