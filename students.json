@@ -1,0 +1,78 @@
+{
+	"_id": 1
+	"Image": "https://lumiere-a.akamaihd.net/v1/images/character_themuppets_kermit_b77a431b.jpeg"
+	"Name": "Jeffrey"
+	"Keyword" : {
+		"Enlightenment"
+		"Addition"
+	}
+	"ClassID" : {
+		"3"
+		"4"
+	}
+	
+
+}
+{
+	"_id": 2
+	"Image": "https://lumiere-a.akamaihd.net/v1/images/character_themuppets_kermit_b77a431b.jpeg"
+	"Name": "Greg"
+	"Keyword" : {
+		"Enlightenment"
+	
+	}
+	"ClassID" : {
+		"1"
+		"4"
+	}
+	
+
+}
+
+{
+	"_id": 3
+	"Image": "https://lumiere-a.akamaihd.net/v1/images/character_themuppets_kermit_b77a431b.jpeg"
+	"Name": "Andy"
+	"Keyword" : {
+		"Geology"
+		"Organic Chemistry"
+	}
+	"ClassID" : {
+		"1"
+		"2"
+	}
+	
+
+}
+
+{
+	"_id": 4
+	"Image": "https://lumiere-a.akamaihd.net/v1/images/character_themuppets_kermit_b77a431b.jpeg"
+	"Name": "Eliza"
+	"Keyword" : {
+	
+	}
+	"ClassID" : {
+		"2"
+		"3"
+	}
+	
+
+}
+
+{
+	"_id": 5
+	"Image": "https://lumiere-a.akamaihd.net/v1/images/character_themuppets_kermit_b77a431b.jpeg"
+	"Name": "Alexa"
+	"Keyword" : {
+		"Enlightenment"
+	
+	}
+	"ClassID" : {
+		"2"
+		"4"
+	}
+	
+
+}
+
