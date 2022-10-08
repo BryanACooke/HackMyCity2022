@@ -1,5 +1,10 @@
 
+.MainDashboard{
+    display: flex;
+    align-items: flex-start;
 
+
+}
 
 
 .teacherProfilePhoto {
@@ -82,4 +87,117 @@
 }
 .classText{
     font-size: 20px;
+}
+
+
+.allStudentsList{
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-left: 10vw;
+    height: 70px;
+
+}
+
+.studentAlertListTitle{
+    font-size: 35px;
+    color: black;
+    margin-top: 10px;
+    padding-bottom: 6px;
+    padding-left: 7px;
+    border-bottom: 1px solid #e5e5e5;
+
+}
+
+
+.studentLists{
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: space-between;
+
+}
+
+
+.studentProfilePhoto{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+
+
+}
+
+.studentGrade{
+    height: 100%;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    margin-bottom: 10px;
+    border-right: 1px solid #e5e5e5;
+}
+.studentGradeText{
+    font-size: 40px;
+    color: black;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.studentGradeTextSubtitle {
+    font-size: 15px;
+    color: black;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+
+.studentName{
+    padding-right: 30%;
+}
+
+.studentNameText{
+    font-size: 37px;
+}
+.studentGradeLevelText{
+    font-size: 20px;
+    margin-top: -10px;
+}
+
+.studentRatingDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.studentRatingLogoIcon{
+    width: 35px;
+    height: 35px;
+    margin-right: 5px;
+}
+.studentRatingText{
+    font-size: 20px;
+    color: black;
+    margin-right: 5px;
+}
+                
+.studentTemplateDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5px;
+    width: 50vw;
+    height: 70px;
+    border-bottom: 1px solid #e5e5e5;
 }

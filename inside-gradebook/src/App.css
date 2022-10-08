@@ -32,6 +32,9 @@
 
 }
 
+.studentLists{
+  margin-left: 10vw;
+}
 
 .landingPage {
   display: flex;

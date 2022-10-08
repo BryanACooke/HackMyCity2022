@@ -49,12 +49,34 @@ function MainDashboard() {
             </div>
         </div>
 
+        <div className="studentListMainClass">
         <div className="studentLists">
             <div className="studentAlertListTop">
-
-            </div>
-
-            <div className="allStudentsList">
+                <h1 className="studentAlertListTitle">Student Alerts</h1>
+                
+                <div className="studentTemplateDiv">
+                    <div className="studentGrade">
+                        <h1 className="studentGradeText">A</h1>
+                        <h2 className="studentGradeTextSubtitle">100%</h2>
+                    </div>
+                    <div className="studentProfilePicture">
+                        <img className="studentProfilePhoto" src="./imgres/bcookepfp.jpg" alt="Profile Picture" />
+                    </div>
+                    <div className="studentName">
+                        <h1 className="studentNameText">John Doe</h1>
+                        <div className="studentGradeLevel">
+                            <h1 className="studentGradeLevelText">Grade 12</h1>
+                        </div> 
+                    </div>
+             <div className="studentRatingDiv">
+                    <div className="studentRatingLogo">
+                        <img className="studentRatingLogoIcon" src="../imgres/icons8-checkmark.gif" alt="Rating Logo" />
+                        </div>
+                    <div className="studentRatingTextDiv">
+                        <h1 className="studentRatingText">On Track</h1>
+                    </div>
+                </div>
+                </div>
 
                 <div className="studentTemplateDiv">
                     <div className="studentGrade">
@@ -67,24 +89,108 @@ function MainDashboard() {
                     <div className="studentName">
                         <h1 className="studentNameText">John Doe</h1>
                         <div className="studentGradeLevel">
-                            <h1 className="studentGradeLevelText">12</h1>
+                            <h1 className="studentGradeLevelText">Grade 12</h1>
                         </div> 
                     </div>
-
              <div className="studentRatingDiv">
                     <div className="studentRatingLogo">
-                        <img className="studentRatingLogoIcon" src="../imgres/icons8-star.gif" alt="Rating Logo" />
+                        <img className="studentRatingLogoIcon" src="../imgres/icons8-checkmark.gif" alt="Rating Logo" />
+                        </div>
+                    <div className="studentRatingTextDiv">
+                        <h1 className="studentRatingText">On Track</h1>
+                    </div>
+                </div>
+                </div>
+
+
+
+                <div className="studentTemplateDiv">
+                    <div className="studentGrade">
+                        <h1 className="studentGradeText">A</h1>
+                        <h2 className="studentGradeTextSubtitle">100%</h2>
+                    </div>
+                    <div className="studentProfilePicture">
+                        <img className="studentProfilePhoto" src="./imgres/bcookepfp.jpg" alt="Profile Picture" />
+                    </div>
+                    <div className="studentName">
+                        <h1 className="studentNameText">John Doe</h1>
+                        <div className="studentGradeLevel">
+                            <h1 className="studentGradeLevelText">Grade 12</h1>
+                        </div> 
+                    </div>
+             <div className="studentRatingDiv">
+                    <div className="studentRatingLogo">
+                        <img className="studentRatingLogoIcon" src="../imgres/icons8-checkmark.gif" alt="Rating Logo" />
+                        </div>
+                    <div className="studentRatingTextDiv">
+                        <h1 className="studentRatingText">On Track</h1>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+            </div>
+
+            <div className="allStudentsList">
+                <h1 className="allStudentsListTitle">All Students</h1>
+
+                <div className="studentTemplateDiv">
+                    <div className="studentGrade">
+                        <h1 className="studentGradeText">A</h1>
+                        <h2 className="studentGradeTextSubtitle">100%</h2>
+                    </div>
+                    <div className="studentProfilePicture">
+                        <img className="studentProfilePhoto" src="./imgres/bcookepfp.jpg" alt="Profile Picture" />
+                    </div>
+                    <div className="studentName">
+                        <h1 className="studentNameText">John Doe</h1>
+                        <div className="studentGradeLevel">
+                            <h1 className="studentGradeLevelText">Grade 12</h1>
+                        </div> 
+                    </div>
+             <div className="studentRatingDiv">
+                    <div className="studentRatingLogo">
+                        <img className="studentRatingLogoIcon" src="../imgres/icons8-checkmark.gif" alt="Rating Logo" />
                         </div>
                     <div className="studentRatingTextDiv">
                         <h1 className="studentRatingText">On Track</h1>
                     </div>
                 </div>
 
+                <div className="studentTemplateDiv">
+                    <div className="studentGrade">
+                        <h1 className="studentGradeText">A</h1>
+                        <h2 className="studentGradeTextSubtitle">100%</h2>
+                    </div>
+                    <div className="studentProfilePicture">
+                        <img className="studentProfilePhoto" src="./imgres/bcookepfp.jpg" alt="Profile Picture" />
+                    </div>
+                    <div className="studentName">
+                        <h1 className="studentNameText">John Doe</h1>
+                        <div className="studentGradeLevel">
+                            <h1 className="studentGradeLevelText">Grade 12</h1>
+                        </div> 
+                    </div>
+             <div className="studentRatingDiv">
+                    <div className="studentRatingLogo">
+                        <img className="studentRatingLogoIcon" src="../imgres/icons8-checkmark.gif" alt="Rating Logo" />
+                        </div>
+                    <div className="studentRatingTextDiv">
+                        <h1 className="studentRatingText">On Track</h1>
+                    </div>
+                </div>
+                </div>
+                </div>
+
+
+                
+
+
             </div>
 
+            </div>
         </div>
-        </div>
-        </div>
+
       );
     }
     
