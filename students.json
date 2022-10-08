@@ -1,74 +1,76 @@
-{
-    "_id":1,
-    "Image":"https://lumiere-a.akamaihd.net/v1/images/character_themuppets_kermit_b77a431b.jpeg",
-    "Name":"Jeffrey",
-    "ClassID":[
-        3,
-        4
-    ],
-    "GradeID":[
-        12,
-        14,
-        17
-    ]
-}
-{
-    "_id":2,
-    "Image":"https://lumiere-a.akamaihd.net/v1/images/character_themuppets_kermit_b77a431b.jpeg",
-    "Name":"Greg",
-    "ClassID":[
-        1,
-        4
-    ],
-    "GradeID":[
-        1,
-        3,
-        5,
-        7,
-        15,
-        18
-    ]
-}
-{
-    "_id":3,
-    "Image":"https://lumiere-a.akamaihd.net/v1/images/character_themuppets_kermit_b77a431b.jpeg",
-    "Name":"Andy",
-    "ClassID":[
-        1,
-        2
-    ],
-    "GradeID":[
-        2,
-        4,
-        6,
-        8,
-        9
-    ]
-}
-{
-    "_id":4,
-    "Image":"https://lumiere-a.akamaihd.net/v1/images/character_themuppets_kermit_b77a431b.jpeg",
-    "Name":"Eliza",
-    "ClassID":[
-        2,
-        3
-    ],
-    "GradeID":[
-        10,
-        13
-    ]
-}
-{
-    "_id":5,
-    "Image":"https://lumiere-a.akamaihd.net/v1/images/character_themuppets_kermit_b77a431b.jpeg",
-    "Name":"Alexa",
-    "ClassID":[
-        2,
-        4
-    ],
-    "GradeID":[
-        11,
-        16,
-        19
-    ]
-}
+[
+		{
+			"_id": 1,
+			"Image": "https://lumiere-a.akamaihd.net/v1/images/character_themuppets_kermit_b77a431b.jpeg",
+			"Name": "Jeffrey",
+			"ClassID": [
+				3,
+				4
+			],
+			"GradeID": [
+				12,
+				14,
+				17
+			]
+		},
+		{
+			"_id": 2,
+			"Image": "https://lumiere-a.akamaihd.net/v1/images/character_themuppets_kermit_b77a431b.jpeg",
+			"Name": "Greg",
+			"ClassID": [
+				1,
+				4
+			],
+			"GradeID": [
+				1,
+				3,
+				5,
+				7,
+				15,
+				18
+			]
+		},
+		{
+			"_id": 3,
+			"Image": "https://lumiere-a.akamaihd.net/v1/images/character_themuppets_kermit_b77a431b.jpeg",
+			"Name": "Andy",
+			"ClassID": [
+				1,
+				2
+			],
+			"GradeID": [
+				2,
+				4,
+				6,
+				8,
+				9
+			]
+		},
+		{
+			"_id": 4,
+			"Image": "https://lumiere-a.akamaihd.net/v1/images/character_themuppets_kermit_b77a431b.jpeg",
+			"Name": "Eliza",
+			"ClassID": [
+				2,
+				3
+			],
+			"GradeID": [
+				10,
+				13
+			]
+		},
+		{
+			"_id": 5,
+			"Image": "https://lumiere-a.akamaihd.net/v1/images/character_themuppets_kermit_b77a431b.jpeg",
+			"Name": "Alexa",
+			"ClassID": [
+				2,
+				4
+			],
+			"GradeID": [
+				11,
+				16,
+				19
+			]
+		}
+	]
