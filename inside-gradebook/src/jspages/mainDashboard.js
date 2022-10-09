@@ -33,7 +33,8 @@ function viewMoreStudent(id){
     setLoading(true);
     axios.get("http://10.12.55.219:1234/getAllStudents", {
     }).then(function (response) {
-        setStudentList(response);
+        setStudentList(response.data.student);
+        setResponse(response.data);
         setError(null);
         setLoading(false);
         console.log(studentList);
@@ -124,9 +125,12 @@ useEffect( () => {
         <div className="studentLists">
             <div className="studentAlertListTop">
                 <h1 className="studentAlertListTitle">Student Alerts</h1>
-                <h1 className="studentNameText">{studentList.message}</h1>
+                <h1 className="studentNameText">{studentList.Name}</h1>
                 <Table className="studentTableList"> 
                     <tbody>
+                    {studentList && studentList.map(searchResults => {    
+                                     console.log(studentList);        
+                                     return (
                         
                      
                                    
@@ -139,7 +143,7 @@ useEffect( () => {
                             </td>
 
                             <td><div className="studentProfilePicture">
-                                 <img className="studentProfilePhoto" src="./imgres/bcookepfp.jpg" alt="Profile Picture" />
+                                 <img className="studentProfilePhoto" src={searchResults.Image} alt="Profile Picture" />
                                 </div>
                                 </td> 
 
@@ -167,8 +171,8 @@ useEffect( () => {
                 </div>
                      </td>
                      </tr>
-                                
-                        
+                                     )
+                                })}
                             
                         
                     </tbody>
@@ -196,6 +200,10 @@ useEffect( () => {
           </div>
           <Table className="studentTableList"> 
                     <tbody>
+                        
+                        {studentList && studentList.map(searchResults => {    
+                                     console.log(studentList);        
+                                     return (
                         <tr>
                             <td>
                                 <div className="studentGrade" style={{backgroundColor: gradeColors.Red,  borderRadius: 4}}>
@@ -205,10 +213,10 @@ useEffect( () => {
                             </td>
                             <td>
                                 <div className="studentProfilePicture">
-                                 <img className="studentProfilePhoto" src="./imgres/bcookepfp.jpg" alt="Profile Picture" />
+                                 <img className="studentProfilePhoto" src={searchResults.Image} alt="Profile Picture" />
                                 </div></td> 
                             <td>
-                        <h1 className="studentNameText">John Doe</h1>
+                        <h1 className="studentNameText">{searchResults.Name}</h1>
                         <div className="studentGradeLevel">
                             <h1 className="studentGradeLevelText">Grade 12</h1>
                             <Button className="viewMoreButtonStudent">View Student</Button>
@@ -228,7 +236,11 @@ useEffect( () => {
                     </div>
                 </div>
                      </td>
-                        </tr>
+                     </tr>
+                            )
+                                    })}
+
+                        
 
                         <tr>
                             <td>
@@ -273,11 +285,6 @@ useEffect( () => {
 
             </div>
 
-
-            <div className="footer"> 
-                <h1 className="footerText"> Made by Jellified Pandas </h1>
-                <img className="pandaIcon" src="./imgres/pandaicon.png"/>
-                </div>
         </div>
 
       );
