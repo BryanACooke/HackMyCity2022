@@ -1,16 +1,62 @@
 import '../csspages/mainDashboard.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Button, Form} from 'react-bootstrap';
+import {Button, Form, Table} from 'react-bootstrap';
 import {React, useEffect, useState} from 'react'
 import {Link}   from 'react-router-dom';
+import axios from 'axios';
+import { useNavigate} from "react-router-dom"
 
 var gradeColors = {    "Red": "#FFC3BB",
                     "Yellow": "#F4DE90",
                     "Green": "#C3ECC7",
 };
 
-
 function MainDashboard() {
+const [error, setError] = useState(null);
+const [loading, setLoading] = useState(false);
+const [response, setResponse] = useState("");
+const [studentList, setStudentList] = useState("");
+
+let navigate = useNavigate();
+
+function viewMoreStudent(id){
+    navigate("/studentPage", {state:{id}});
+
+}
+
+
+
+
+
+function getData() {
+    setLoading(true);
+    axios.get("http://localhost:5678/get/mainData", {
+    }).then(function (response) {
+        setError(null);
+        setLoading(false);
+        // handle success
+        setResponse(response.data);
+    }).catch(function (error) {
+        // handle error
+        console.log(error);
+    })
+        .then(function (response) {
+        });
+}
+
+
+
+
+useEffect(() => {
+    getData(); 
+    
+}, [])
+
+
+
+
+
+
     return (
       <div className="MainDashboard">
         <div className="teacherSideBar">
@@ -20,7 +66,10 @@ function MainDashboard() {
                         <img className="teacherProfilePhoto" src="./imgres/bcookepfp.jpg" alt="Profile Picture" />
                         </div>
                     <div className="teacherName">
-                        <h1 className="teacherNameText">John Doe</h1>
+
+                    <h1 className="teacherNameText">John Doe</h1>
+            
+                        
                     </div>
                     <div className="teacherPosition">
                         <h1 className="teacherPositionText">Teacher</h1>
@@ -34,14 +83,25 @@ function MainDashboard() {
                 <div className="classList">
 
 
+                <div className="classExample"> 
+                     <div className="classOneLogo">
+                        <img className="classLogoIcon" src="../imgres/icons8-index-96.png" alt="Class Logo" />
+                     </div>
+                    <div className="classTextDiv">
+                    <Link to='/mainDashBoard'>
+                        <h1 className="classText">Overview</h1>
+                        </Link>
+                        
+                     </div>
+                     </div>
+
+
                     <div className="classExample"> 
                      <div className="classOneLogo">
                         <img className="classLogoIcon" src="../imgres/icons8-calculator.gif" alt="Class Logo" />
                      </div>
                     <div className="classTextDiv">
-                    <Link to='/mainDashBoard'>
                         <h1 className="classText">Calculus 1</h1>
-                        </Link>
                         
                      </div>
                      </div>
@@ -63,81 +123,52 @@ function MainDashboard() {
         <div className="studentLists">
             <div className="studentAlertListTop">
                 <h1 className="studentAlertListTitle">Student Alerts</h1>
-                
-                <div className="studentTemplateDiv">
-                    <div className="studentGrade" style={{backgroundColor: gradeColors.Red,  borderRadius: 4}}>
-                        <h1 className="studentGradeText">F</h1>
-                        <h2 className="studentGradeTextSubtitle">42%</h2>
-                    </div>
-                    <div className="studentProfilePicture">
-                        <img className="studentProfilePhoto" src="./imgres/bcookepfp.jpg" alt="Profile Picture" />
-                    </div>
-                    <div className="studentName">
+                <Table className="studentTableList"> 
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div className="studentGrade" style={{backgroundColor: gradeColors.Red,  borderRadius: 4}}>
+                                <h1 className="studentGradeText"> F </h1>
+                                <h1 className="studentGradeTextSubtitle"> 42% </h1>
+                                </div>
+                            </td>
+                            <td><div className="studentProfilePicture">
+                                 <img className="studentProfilePhoto" src="./imgres/bcookepfp.jpg" alt="Profile Picture" />
+                                </div></td> 
+                            <td>
                         <h1 className="studentNameText">John Doe</h1>
-                        <div className="studentGradeLevel">
-                            <h1 className="studentGradeLevelText">Grade 12</h1>
-                        </div> 
-                    </div>
-             <div className="studentRatingDiv">
-                    <div className="studentRatingLogo">
-                        <img className="studentRatingLogoIcon" src="../imgres/icons8-error-96.png" alt="Rating Logo" />
-                        </div>
-                    <div className="studentRatingTextDiv">
-                        <h1 className="studentRatingText">Needs Attention</h1>
-                    </div>
-                </div>
-                </div>
 
-                <div className="studentTemplateDiv">
-                    <div className="studentGrade" style={{backgroundColor: gradeColors.Green,  borderRadius: 4}}>
-                        <h1 className="studentGradeText">A</h1>
-                        <h2 className="studentGradeTextSubtitle">100%</h2>
-                    </div>
-                    <div className="studentProfilePicture">
-                        <img className="studentProfilePhoto" src="./imgres/bcookepfp.jpg" alt="Profile Picture" />
-                    </div>
-                    <div className="studentName">
-                        <h1 className="studentNameText">John Doe</h1>
                         <div className="studentGradeLevel">
                             <h1 className="studentGradeLevelText">Grade 12</h1>
+                            <Button className="viewMoreButtonStudent">View Student</Button>
                         </div> 
-                    </div>
-             <div className="studentRatingDiv">
+                            </td>
+                            <td>
+                            <div className="studentRatingDiv">
                     <div className="studentRatingLogo">
                         <img className="studentRatingLogoIcon" src="../imgres/icons8-error-96.png" alt="Rating Logo" />
-                        </div>
+
                     <div className="studentRatingTextDiv">
+                        
                         <h1 className="studentRatingText">Needs Attention</h1>
+                        <ul>
+                        <li className="studentTag">Math</li>
+                        <li className="studentTag">Science</li>
+                    </ul> 
+                    </div>
+                    </div>
+                    <div>
                     </div>
                 </div>
+                     </td>
+                        </tr>
+                    </tbody>
+                    </Table>
                 </div>
-                <div className="studentTemplateDiv">
-                    <div className="studentGrade" style={{backgroundColor: gradeColors.Green,  borderRadius: 4}}>
-                        <h1 className="studentGradeText">A</h1>
-                        <h2 className="studentGradeTextSubtitle">100%</h2>
-                    </div>
-                    <div className="studentProfilePicture">
-                        <img className="studentProfilePhoto" src="./imgres/bcookepfp.jpg" alt="Profile Picture" />
-                    </div>
-                    <div className="studentName">
-                        <h1 className="studentNameText">John Doe</h1>
-                        <div className="studentGradeLevel">
-                            <h1 className="studentGradeLevelText">Grade 12</h1>
-                        </div> 
-                    </div>
-             <div className="studentRatingDiv">
-                    <div className="studentRatingLogo">
-                        <img className="studentRatingLogoIcon" src="../imgres/icons8-error-96.png" alt="Rating Logo" />
-                        </div>
-                    <div className="studentRatingTextDiv">
-                        <h1 className="studentRatingText">Needs Attention</h1>
-                    </div>
-                </div>
-                </div>
-            </div>
             </div>
             
            <div className="allStudentsList">
+
            <div className="studentLists">
             <div className="titleAndFormSearch">
                 <h1 className="allStudentsListTitle">All Students</h1>
@@ -153,88 +184,90 @@ function MainDashboard() {
           </Form>
           </div>
           </div>
-                <div className="studentTemplateDiv">
-                    <div className="studentGrade">
-                        <h1 className="studentGradeText">A</h1>
-                        <h2 className="studentGradeTextSubtitle">100%</h2>
-                    </div>
-                    <div className="studentProfilePicture">
-                        <img className="studentProfilePhoto" src="./imgres/bcookepfp.jpg" alt="Profile Picture" />
-                    </div>
-                    <div className="studentName">
+          <Table className="studentTableList"> 
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div className="studentGrade" style={{backgroundColor: gradeColors.Red,  borderRadius: 4}}>
+                                <h1 className="studentGradeText"> F </h1>
+                                <h1 className="studentGradeTextSubtitle"> 42% </h1>
+                                </div>
+                            </td>
+                            <td>
+                                <div className="studentProfilePicture">
+                                 <img className="studentProfilePhoto" src="./imgres/bcookepfp.jpg" alt="Profile Picture" />
+                                </div></td> 
+                            <td>
                         <h1 className="studentNameText">John Doe</h1>
                         <div className="studentGradeLevel">
                             <h1 className="studentGradeLevelText">Grade 12</h1>
-                        </div> 
-                    </div>
-             <div className="studentRatingDiv">
+                            <Button className="viewMoreButtonStudent">View Student</Button>
+                        </div>  
+                            </td>
+                            <td>
+                            <div className="studentRatingDiv">
                     <div className="studentRatingLogo">
                         <img className="studentRatingLogoIcon" src="../imgres/icons8-checkmark.gif" alt="Rating Logo" />
-                        </div>
+
                     <div className="studentRatingTextDiv">
-                        <h1 className="studentRatingText">On Track</h1>
+                        
+                        <h1 className="studentRatingText">All Good</h1>
+                    </div>
+                    </div>
+                    <div>
                     </div>
                 </div>
+                     </td>
+                        </tr>
 
-                
-                </div>
-
-                <div className="studentTemplateDiv">
-                    <div className="studentGrade">
-                        <h1 className="studentGradeText">A</h1>
-                        <h2 className="studentGradeTextSubtitle">100%</h2>
-                    </div>
-                    <div className="studentProfilePicture">
-                        <img className="studentProfilePhoto" src="./imgres/bcookepfp.jpg" alt="Profile Picture" />
-                    </div>
-                    <div className="studentName">
+                        <tr>
+                            <td>
+                                <div className="studentGrade" style={{backgroundColor: gradeColors.Red,  borderRadius: 4}}>
+                                <h1 className="studentGradeText"> F </h1>
+                                <h1 className="studentGradeTextSubtitle"> 42% </h1>
+                                </div>
+                            </td>
+                            <td><div className="studentProfilePicture">
+                                 <img className="studentProfilePhoto" src="./imgres/bcookepfp.jpg" alt="Profile Picture" />
+                                </div></td> 
+                            <td>
                         <h1 className="studentNameText">John Doe</h1>
                         <div className="studentGradeLevel">
                             <h1 className="studentGradeLevelText">Grade 12</h1>
+                            <Button className="viewMoreButtonStudent">View Student</Button>
                         </div> 
-                    </div>
-             <div className="studentRatingDiv">
+                            </td>
+                            <td>
+                            <div className="studentRatingDiv">
                     <div className="studentRatingLogo">
                         <img className="studentRatingLogoIcon" src="../imgres/icons8-checkmark.gif" alt="Rating Logo" />
-                        </div>
+
                     <div className="studentRatingTextDiv">
-                        <h1 className="studentRatingText">On Track</h1>
+                        
+                        <h1 className="studentRatingText">All Good</h1>
+                    </div>
+                    </div>
+                    <div>
                     </div>
                 </div>
+                     </td>
+                        </tr>
+                        
+                    </tbody>
+                    </Table>
 
-                
-                </div>
-
-                <div className="studentTemplateDiv">
-                    <div className="studentGrade">
-                        <h1 className="studentGradeText">A</h1>
-                        <h2 className="studentGradeTextSubtitle">100%</h2>
-                    </div>
-                    <div className="studentProfilePicture">
-                        <img className="studentProfilePhoto" src="./imgres/bcookepfp.jpg" alt="Profile Picture" />
-                    </div>
-                    <div className="studentName">
-                        <h1 className="studentNameText">John Doe</h1>
-                        <div className="studentGradeLevel">
-                            <h1 className="studentGradeLevelText">Grade 12</h1>
-                        </div> 
-                    </div>
-             <div className="studentRatingDiv">
-                    <div className="studentRatingLogo">
-                        <img className="studentRatingLogoIcon" src="../imgres/icons8-checkmark.gif" alt="Rating Logo" />
-                        </div>
-                    <div className="studentRatingTextDiv">
-                        <h1 className="studentRatingText">On Track</h1>
-                    </div>
-                </div>
-
-                
-                </div>
 
                 </div>
             </div>
 
+
             </div>
+
+
+            <div className="footer"> 
+                <h1 className="footerText"> Made by Jellified Pandas </h1>
+                <img className="pandaIcon" src="./imgres/pandaicon.png"/>
+                </div>
         </div>
 
       );
