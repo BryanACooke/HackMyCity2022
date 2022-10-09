@@ -18,11 +18,8 @@ function App() {
           <h1 className="mainTitle">InsideTheGradebook</h1>
           </div>
           <div className="contentDetailedText">
-            <p>Lorem Ipsum is simply dummy text of the printing and 
-              typesetting industry. Lorem Ipsum has been the
-               industry's standard dummy text ever since the 1500s, 
-               when an unknown printer took a galley of type and scrambled
-                it to make a type specimen book. </p>
+            <p>Inside The Gradebook provides a clean, simple, and easy to view student progress
+              overview. You can specify which classes you  </p>
                 <Button className="letsGoButton">Let's Go!</Button>
         </div>
         
