@@ -1,0 +1,60 @@
+[
+	{
+		"_id": 1,
+		"ClassID": 1,
+		"name": "Math",
+		"StudentID": [
+			2,
+			3
+		],
+		"TeacherID": 1,
+		"AssignmentID": [
+			1,
+			2,
+			3,
+			4
+		]
+	},
+	{
+		"_id": 2,
+		"ClassID": 2,
+		"name": "Science",
+		"StudentID": [
+			3,
+			4,
+			5
+		],
+		"TeacherID": 2,
+		"AssignmentID": [
+			5
+		]
+	},
+	{
+		"_id": 3,
+		"ClassID": 3,
+		"name": "Spanish",
+		"StudentID": [
+			1,
+			4
+		],
+		"TeacherID": 3,
+		"AssignmentID": [
+			6
+		]
+	},
+	{
+		"_id": 4,
+		"ClassID": 4,
+		"name": "History",
+		"StudentID": [
+			1,
+			2,
+			5
+		],
+		"TeacherID": 1,
+		"AssignmentID": [
+			7,
+			8
+		]
+	}
+]
