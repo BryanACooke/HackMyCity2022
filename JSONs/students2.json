@@ -1,0 +1,86 @@
+[
+		{
+			"_id": 1,
+			"StudentID": 1,
+			"Image": "https://lumiere-a.akamaihd.net/v1/images/character_themuppets_kermit_b77a431b.jpeg",
+			"Name": "Jeffrey",
+			"Class": [
+				"English",
+				"History"
+			],
+			"Grade": [
+				92,
+				83,
+				100
+			],
+			"GradeClass": [
+				"Spanish"
+
+			]
+			
+		},
+		{
+			"_id": 2,
+			"StudentID": 2,
+			"Image": "https://lumiere-a.akamaihd.net/v1/images/character_themuppets_kermit_b77a431b.jpeg",
+			"Name": "Greg",
+			"Class": [
+				"Math",
+				"History"
+			],
+			"Grade": [
+				64,
+				25,
+				89,
+				73,
+				98,
+				46
+			]
+		},
+		{
+			"_id": 3,
+			"StudentID": 3,
+			"Image": "https://lumiere-a.akamaihd.net/v1/images/character_themuppets_kermit_b77a431b.jpeg",
+			"Name": "Andy",
+			"Class": [
+				"Math",
+				"Science"
+			],
+			"Grade": [
+				100,
+				97,
+				85,
+				100,
+				100
+			]
+		},
+		{
+			"_id": 4,
+			"StudentID": 4,
+			"Image": "https://lumiere-a.akamaihd.net/v1/images/character_themuppets_kermit_b77a431b.jpeg",
+			"Name": "Eliza",
+			"Class": [
+				"Science",
+				"English"
+			],
+			"Grade": [
+				81,
+				45
+			]
+		},
+		{
+			"_id": 5,
+			"StudentID": 5,
+			"Image": "https://lumiere-a.akamaihd.net/v1/images/character_themuppets_kermit_b77a431b.jpeg",
+			"Name": "Alexa",
+			"Class": [
+				"Science",
+				"History"
+			],
+			"Grade": [
+				63,
+				62,
+				85
+			]
+		}
+	]
