@@ -30,8 +30,9 @@ function viewMoreStudent(id){
 
 function getData() {
     setLoading(true);
-    axios.get("http://localhost:5678/get/mainData", {
+    axios.get("http://10.12.55.219:1234/getAllStudents", {
     }).then(function (response) {
+        console.log(response);
         setError(null);
         setLoading(false);
         // handle success
@@ -43,7 +44,6 @@ function getData() {
         .then(function (response) {
         });
 }
-
 
 
 

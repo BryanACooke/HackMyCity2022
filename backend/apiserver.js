@@ -4,14 +4,34 @@ const app = express();
 
 
 
-const port = 3000;
+const port = 1234;
 
 
 const MongoClient = require('mongodb').MongoClient;
 var uri = "mongodb://127.0.0.1:27017/";
 
 
+app.use(function (req, res, next) {
 
+    // Website you wish to allow to connect
+    res.setHeader('Access-Control-Allow-Origin', '*');
+  
+    // Request methods you wish to allow
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+  
+    // Request headers you wish to allow
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+  
+    // Set to true if you need the website to include cookies in the requests sent
+    // to the API (e.g. in case you use sessions)
+    res.setHeader('Access-Control-Allow-Credentials', true);
+  
+    // Pass to next layer of middleware
+    next();
+  }); 
+  // For the search, if nothing in database, call API. Check database, if user clicks on 
+  // search for more, then call API
+  
 
 
 app.get('/getAllStudents', (req, res) => {
@@ -24,10 +44,10 @@ app.get('/getAllStudents', (req, res) => {
         if(err) throw err;
 
         var dbo = client.db("Gradebook");
-         var query = {"Name": "Jeffrey"}
 
 
-        dbo.collection("students").find(query).toArray(function(err, result) {
+
+        dbo.collection("students").find().toArray(function(err, result) {
             if (err) throw err;
     
             for(var i =0; i<result.length; i++){
@@ -36,34 +56,8 @@ app.get('/getAllStudents', (req, res) => {
     
             rsp_obj.student = result;
             rsp_obj.message = "All Students Found!"
-    
-         var queryTwo = {"StudentID": rsp_obj.student[0].StudentID}
-
-
-        dbo.collection("grades").find(queryTwo).toArray(function(err, resL) {
-            if (err) throw err;
-    
-            for(var i =0; i<resL.length; i++){
-                console.log(result[i]);
-            }
-    
-            rsp_obj.studentData = resL;
-            rsp_obj.messageData = "All Students Found!";
-
-            for(let z=0; z < rsp_obj.studentData.length; z++)
-            {
-                console.log(rsp_obj.studentData[z].Score);
-            }
-
             return res.status(200).send(rsp_obj);
-            client.close()
-    
-
-            }
-
-        
-        
-        )})
+        })
     }
   )});
   
