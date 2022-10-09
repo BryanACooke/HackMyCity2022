@@ -62,33 +62,7 @@ app.get('/getAllStudents', (req, res) => {
     }
   )});
 
-  app.get('/searchDatabase', (req, res) => {
-    var obj = {};
-    var rsp_obj = {};
 
-
-
-    MongoClient.connect(uri, {useUnifiedTopology: true}, function(err, client){
-        if(err) throw err;
-
-        var dbo = client.db("Gradebook");
-
-        var query = {"Letter": "C" }
-
-        dbo.collection("students").find(query).toArray(function(err, result) {
-            if (err) throw err;
-    
-            for(var i =0; i<result.length; i++){
-                console.log(result[i]);
-            }
-
-            rsp_obj.student = result;
-            rsp_obj.message = "All Students Found!"
-            console.log(rsp_obj)
-            return res.status(200).send(rsp_obj);
-        })
-    }
-  )});
   
   app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)

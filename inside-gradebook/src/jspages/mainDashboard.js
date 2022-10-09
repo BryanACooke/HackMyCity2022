@@ -32,7 +32,7 @@ function viewMoreButton(id){
 
  function getData() {
     setLoading(true);
-    axios.get("http://localhost:1234/getAllStudents", {
+    axios.get("http://10.12.55.219:1234/getAllStudents", {
     }).then(function (response) {
         setStudentList(response.data.student);
         setResponse(response.data);
@@ -50,7 +50,7 @@ function viewMoreButton(id){
 
 function loadProfile() {
     setLoading(true);
-    axios.get("http://localhost:1234/searchDatabase", {
+    axios.get("http://10.12.55.219:1234/searchDatabase", {
     }).then(function (response) {
         setStudentListTwo(response.data.student);
         console.log(studentList);
