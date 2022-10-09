@@ -3,6 +3,7 @@ from pymongo import MongoClient
 from bson import json_util
 
 
+
 DB_NAME = 'Gradebook'
 COLLECTION_STUDENTS = 'Students'
 COLLECTION_GRADES = 'Grades'
@@ -38,7 +39,7 @@ def find_all_students():
 # find_all_students()
 
 def find_s43():
-    tim = coll1.find_one({"student_id": 43, "class_id": 18})
+    tim = coll1.find_one({"StudentID": 43, "ClassID": 18, })
     printer.pprint(tim)
 
 #find_s43()
@@ -102,17 +103,40 @@ def search_students_by_assignments():
 
 def get_scores():
     student_id = 1
-    db.coll_s.aggregate(
-        { $match : ("student_id": student_id, "class_id": 4,  )}
-    )
+    pipeline =  [
+        {
+            "$match": {
+                "StudentID": student_id, "ClassID": 4
+            }
+        }
+    ]
+    grades = db.coll_s.aggregate(pipeline)
+    print("x")
+    for itr in grades:
+        print("y")
+        print(itr)   
+    pipeline = [{'$lookup': 
+                    {'from' : 'models',
+                    'localField' : '_id',
+                    'foreignField' : 'references',
+                    'as' : 'cellmodels'}},
+                {'$unwind': '$cellmodels'},
+                {'$match':
+                    {'authors' : 'Migliore M', 'cellmodels.celltypes' : 'Hippocampus CA3 pyramidal cell'}},
+                {'$project': 
+                    {'authors':1, 'cellmodels.celltypes':1}} 
+                ]
+
+for doc in (papers.agg
+
+    
+])
+
     # grades = coll_g.find({"scores", "class_id": class_id})
     # print("1")
     # for itr in grade
-    #     print("2")
-    #     print(itr)
-    #     print("3")
-    
-    print("4")
+    #     print(itr)    
+
 get_scores()
 
 #get student's performance level: on track/needs attention
