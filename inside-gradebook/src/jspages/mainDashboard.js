@@ -17,6 +17,7 @@ const [loading, setLoading] = useState(false);
 const [response, setResponse] = useState("");
 const [studentList, setStudentList] = useState("");
 
+
 let navigate = useNavigate();
 
 function viewMoreStudent(id){
@@ -28,15 +29,15 @@ function viewMoreStudent(id){
 
 
 
-function getData() {
+ function getData() {
     setLoading(true);
     axios.get("http://10.12.55.219:1234/getAllStudents", {
     }).then(function (response) {
-        console.log(response);
+        setStudentList(response);
         setError(null);
         setLoading(false);
+        console.log(studentList);
         // handle success
-        setResponse(response.data);
     }).catch(function (error) {
         // handle error
         console.log(error);
@@ -47,8 +48,8 @@ function getData() {
 
 
 
-useEffect(() => {
-    getData(); 
+useEffect( () => {
+    getData();
     
 }, [])
 
@@ -123,33 +124,37 @@ useEffect(() => {
         <div className="studentLists">
             <div className="studentAlertListTop">
                 <h1 className="studentAlertListTitle">Student Alerts</h1>
+                <h1 className="studentNameText">{studentList.message}</h1>
                 <Table className="studentTableList"> 
                     <tbody>
+                        
+                     
+                                   
                         <tr>
-                            <td>
+                            <td >
                                 <div className="studentGrade" style={{backgroundColor: gradeColors.Red,  borderRadius: 4}}>
                                 <h1 className="studentGradeText"> F </h1>
-                                <h1 className="studentGradeTextSubtitle"> 42% </h1>
+                                <h1 className="studentGradeTextSubtitle"> % </h1>
                                 </div>
                             </td>
+
                             <td><div className="studentProfilePicture">
                                  <img className="studentProfilePhoto" src="./imgres/bcookepfp.jpg" alt="Profile Picture" />
-                                </div></td> 
-                            <td>
-                        <h1 className="studentNameText">John Doe</h1>
+                                </div>
+                                </td> 
 
-                        <div className="studentGradeLevel">
-                            <h1 className="studentGradeLevelText">Grade 12</h1>
-                            <Button className="viewMoreButtonStudent">View Student</Button>
-                        </div> 
+                        <td>
+                            <h1 className="studentNameText"></h1>
+                                <div className="studentGradeLevel">
+                                 <h1 className="studentGradeLevelText">Grade 12</h1>
+                                    <Button className="viewMoreButtonStudent">View Student</Button>
+                                </div> 
                             </td>
-                            <td>
-                            <div className="studentRatingDiv">
-                    <div className="studentRatingLogo">
-                        <img className="studentRatingLogoIcon" src="../imgres/icons8-error-96.png" alt="Rating Logo" />
-
-                    <div className="studentRatingTextDiv">
-                        
+                        <td>
+                        <div className="studentRatingDiv">
+                        <div className="studentRatingLogo">
+                             <img className="studentRatingLogoIcon" src="../imgres/icons8-error-96.png" alt="Rating Logo" />
+                        <div className="studentRatingTextDiv">
                         <h1 className="studentRatingText">Needs Attention</h1>
                         <ul>
                         <li className="studentTag">Math</li>
@@ -161,11 +166,16 @@ useEffect(() => {
                     </div>
                 </div>
                      </td>
-                        </tr>
+                     </tr>
+                                
+                        
+                            
+                        
                     </tbody>
                     </Table>
                 </div>
             </div>
+
             
            <div className="allStudentsList">
 
