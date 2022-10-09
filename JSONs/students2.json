@@ -23,9 +23,10 @@
 				"Enlightenment",
 				"American Revolution"
 			]
-		]
+		],
 		"Rating": 92,
-		"Letter":  "A"
+		"Letter": "A",
+		"Keywords": []
 
 	},
 	{
@@ -56,7 +57,8 @@
 			]
 		],
 		"Rating": 66,
-		"Letter": "D"
+		"Letter": "D",
+		"Keywords": ["Addition","American Revolution"]
 	},
 	{
 		"_id": 3,
@@ -84,7 +86,8 @@
 			]
 		],
 		"Rating": 96,
-		"Letter": "A"
+		"Letter": "A",
+		"Keywords": []
 	},
 	{
 		"_id": 4,
@@ -103,7 +106,8 @@
 			[ "Geology", "Verbs" ]
 		],
 		"Rating": 63,
-		"Letter": "D"
+		"Letter": "D",
+		"Keywords": ["Verbs"]
 	},
 	{
 		"_id": 5,
@@ -127,7 +131,8 @@
 			]
 		],
 		"Rating": 70,
-		"Letter": "C"
+		"Letter": "C",
+		"Keywords": ["Geology","Enlightenment"]
 	},
 
 	{
@@ -159,7 +164,8 @@
 			]
 		],
 		"Rating": 84,
-		"Letter": "B"
+		"Letter": "B",
+		"Keywords": ["Multiplication"]
 	},
 
 	{
@@ -182,7 +188,8 @@
 			]
 		],
 		"Rating": 81,
-		"Letter": "B"
+		"Letter": "B",
+		"Keywords": ["Verbs"]
 	},
 
 	{
@@ -211,7 +218,8 @@
 			]
 		],
 		"Rating": 80,
-		"Letter": "B"
+		"Letter": "B",
+		"Keywords": ["Addition"]
 	},
 
 	{
@@ -236,7 +244,8 @@
 			]
 		],
 		"Rating": 73,
-		"Letter": "C"
+		"Letter": "C",
+		"Keywords": ["Enlightenment"]
 	},
 
 	{
@@ -261,7 +270,8 @@
 			]
 		],
 		"Rating": 70,
-		"Letter": "C"
+		"Letter": "C",
+		"Keywords": ["Geology","Enlightenment"]
 	},
 
 	{
@@ -292,7 +302,8 @@
 			]
 		],
 		"Rating": 98,
-		"Letter": "A"
+		"Letter": "A",
+		"Keywords": []
 	},
 
 	{
@@ -315,7 +326,8 @@
 			]
 		],
 		"Rating": 75,
-		"Letter": "C"
+		"Letter": "C",
+		"Keywords": ["Verbs"]
 	},
 
 	{
@@ -340,7 +352,8 @@
 			]
 		],
 		"Rating": 79,
-		"Letter": "C"
+		"Letter": "C",
+		"Keywords": ["Enlightenment"]
 	},
 
 	{
@@ -369,7 +382,8 @@
 			]
 		],
 		"Rating": 78,
-		"Letter": "C"
+		"Letter": "C",
+		"Keywords": ["Math"]
 	},
 
 	{
@@ -392,7 +406,8 @@
 			]
 		],
 		"Rating": 73,
-		"Letter": "C"
+		"Letter": "C",
+		"Keywords": ["Geology"]
 	}
 
 
