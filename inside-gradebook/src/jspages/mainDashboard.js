@@ -137,18 +137,18 @@ useEffect( () => {
                         <tr>
                             <td >
                                 <div className="studentGrade" style={{backgroundColor: gradeColors.Red,  borderRadius: 4}}>
-                                <h1 className="studentGradeText"> F </h1>
-                                <h1 className="studentGradeTextSubtitle"> % </h1>
+                                <h1 className="studentGradeText"> {searchResults.Letter} </h1>
+                                <h1 className="studentGradeTextSubtitle"> {searchResults.Rating + "%"} </h1>
                                 </div>
                             </td>
 
                             <td><div className="studentProfilePicture">
-                                 <img className="studentProfilePhoto" src={searchResults.Image} alt="Profile Picture" />
+                            <img className="studentProfilePhoto" src= {"../imgres/faces/" +  searchResults.Name + ".jpg"} alt="Profile Picture" />
                                 </div>
                                 </td> 
 
                         <td>
-                            <h1 className="studentNameText"></h1>
+                            <h1 className="studentNameText">{searchResults.Name}</h1>
                                 <div className="studentGradeLevel">
                                  <h1 className="studentGradeLevelText">Grade 12</h1>
                                     <Button className="viewMoreButtonStudent">View Student</Button>
@@ -213,7 +213,7 @@ useEffect( () => {
                             </td>
                             <td>
                                 <div className="studentProfilePicture">
-                                 <img className="studentProfilePhoto" src={searchResults.Image} alt="Profile Picture" />
+                                 <img className="studentProfilePhoto" src= {"../imgres/faces/" +  searchResults.Name + ".jpg"} alt="Profile Picture" />
                                 </div></td> 
                             <td>
                         <h1 className="studentNameText">{searchResults.Name}</h1>
@@ -240,41 +240,6 @@ useEffect( () => {
                             )
                                     })}
 
-                        
-
-                        <tr>
-                            <td>
-                                <div className="studentGrade" style={{backgroundColor: gradeColors.Red,  borderRadius: 4}}>
-                                <h1 className="studentGradeText"> F </h1>
-                                <h1 className="studentGradeTextSubtitle"> 42% </h1>
-                                </div>
-                            </td>
-                            <td><div className="studentProfilePicture">
-                                 <img className="studentProfilePhoto" src="./imgres/bcookepfp.jpg" alt="Profile Picture" />
-                                </div></td> 
-                            <td>
-                        <h1 className="studentNameText">John Doe</h1>
-                        <div className="studentGradeLevel">
-                            <h1 className="studentGradeLevelText">Grade 12</h1>
-                            <Button className="viewMoreButtonStudent">View Student</Button>
-                        </div> 
-                            </td>
-                            <td>
-                            <div className="studentRatingDiv">
-                    <div className="studentRatingLogo">
-                        <img className="studentRatingLogoIcon" src="../imgres/icons8-checkmark.gif" alt="Rating Logo" />
-
-                    <div className="studentRatingTextDiv">
-                        
-                        <h1 className="studentRatingText">All Good</h1>
-                    </div>
-                    </div>
-                    <div>
-                    </div>
-                </div>
-                     </td>
-                        </tr>
-                        
                     </tbody>
                     </Table>
 
@@ -284,6 +249,7 @@ useEffect( () => {
 
 
             </div>
+
 
         </div>
 
