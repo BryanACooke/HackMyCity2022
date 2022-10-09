@@ -48,9 +48,9 @@ export class LineChart extends Component {
       this.state = {
       
         series: [ {
-          name: 'Revenue',
+          name: 'Average ACT Score',
           type: 'line',
-          data: [20, 29, 37, 36, 44, 45, 50, 58]
+          data: [24, 31, 29, 29, 31, 31, 24, 31]
         }],
         options: {
           chart: {
@@ -65,12 +65,12 @@ export class LineChart extends Component {
             width: [1, 1, 4]
           },
           title: {
-            text: 'Student Grade Scores',
+            text: 'Average ACT Score',
             align: 'left',
             offsetX: 110
           },
           xaxis: {
-            categories: [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016],
+            categories: [2017 ,2018 ,2019, 2020, 2021, 2022, 2023, 2024],
           },
           yaxis: [
             {

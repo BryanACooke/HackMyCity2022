@@ -54,20 +54,34 @@ app.get('/getAllStudents', (req, res) => {
                 console.log(result[i]);
             }
 
-            var onlyGrades = 0;
-            var avg=[];
-            for(var i =0; i<result.length; i++){
-                var sum=0;
-                var c=0;
-                onlyGrades = result[i].Grades[0]; 
-                for(var j=0;j<onlyGrades.length;j++){
-                    sum=sum+onlyGrades[j];
-                    c=c+1;
-                }
-                avg[i] = sum/c;
+            rsp_obj.student = result;
+            rsp_obj.message = "All Students Found!"
+            console.log(rsp_obj)
+            return res.status(200).send(rsp_obj);
+        })
+    }
+  )});
 
+  app.get('/searchDatabase', (req, res) => {
+    var obj = {};
+    var rsp_obj = {};
+
+
+
+    MongoClient.connect(uri, {useUnifiedTopology: true}, function(err, client){
+        if(err) throw err;
+
+        var dbo = client.db("Gradebook");
+
+        var query = {"Letter": "C" }
+
+        dbo.collection("students").find(query).toArray(function(err, result) {
+            if (err) throw err;
+    
+            for(var i =0; i<result.length; i++){
+                console.log(result[i]);
             }
- 
+
             rsp_obj.student = result;
             rsp_obj.message = "All Students Found!"
             console.log(rsp_obj)

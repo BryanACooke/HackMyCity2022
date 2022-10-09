@@ -20,7 +20,7 @@ function App() {
           <div className="contentDetailedText">
             <p>Inside The Gradebook provides a clean, simple, and easy to view student progress
               overview. You can specify which classes you  </p>
-                <Button className="letsGoButton">Let's Go!</Button>
+          
         </div>
         
         </div>

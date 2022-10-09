@@ -1,10 +1,52 @@
 import '../csspages/studentpage.css'
 import {Button} from 'react-bootstrap'
 import {DataChart, LineChart} from '../jspages/Datachart'
+import {useLocation} from 'react-router-dom'
+import { useNavigate} from "react-router-dom"
+import { useState, useEffect } from "react";
+import axios from 'axios'
+
 
 
 
 function StudentPage(){     
+
+    const [error, setError] = useState(null);
+    const [loading, setLoading] = useState(false);
+    let [resonse, setResponse] = useState(null);
+    let [studentList, setStudentList] = useState("");
+    let [display_name, setDisplayName] = useState("");
+    let navigate = useNavigate();
+    const location = useLocation();
+    let name = location.state.name;
+
+    function loadProfile() {
+        setLoading(true);
+        axios.get("http://localhost:1234/searchDatabase", {
+        }).then(function (response) {
+            setStudentList(response.data.student);
+            console.log(studentList);
+            setResponse(response.data);
+            setError(null);
+            setLoading(false);
+            console.log(studentList);
+            // handle success
+        }).catch(function (error) {
+            // handle error
+            console.log(error);
+        })
+            .then(function (response) {
+            });
+    }
+    
+    
+
+        useEffect(() => {
+            loadProfile();
+        }, []);
+
+
+
     return (
         <div className="studentPage">
 
@@ -13,10 +55,10 @@ function StudentPage(){
                 <div className="studentPageLeftTopContent">
 
             <div className="studentPageLeftTopContentImage" >
-                <img className="userProfileImageLeft" src="./imgres/bcookepfp.jpg" alt="Online Education Image" />
+                <img className="userProfileImageLeft" src="./imgres/JeffreyWilson.jpg" alt="Online Education Image" />
             </div>
             <div className="studentPageLeftTopContentText">
-            <h1 className="studentPageLeftTopContentTextName">Bryan Cooke</h1>
+            <h1 className="studentPageLeftTopContentTextName">Jeffrey Wilson</h1>
             <h1 className="studentPageLeftTopContentTextGrade">Grade: 12</h1>
             </div>
 
@@ -37,10 +79,7 @@ function StudentPage(){
                 </div>
             </div>
 
-            <div className="printStudentReport">
-                
-                <Button className="printStudentReportButton">Print Student Report</Button>
-            </div>
+
 
             </div>
 
@@ -66,15 +105,15 @@ function StudentPage(){
 
                         </tr>
                         <tr>
-                            <td>Assignment 1</td>
-                            <td>100%</td>
+                            <td>English Exam</td>
+                            <td>90%</td>
                         </tr>   
                         <tr>
-                            <td>Assignment 2</td>
-                            <td>100%</td>
+                            <td>Science Homework</td>
+                            <td>96%</td>
                         </tr>
                         <tr>
-                            <td>Assignment 3</td>
+                            <td>Math Quiz</td>
                             <td>100%</td>
                         </tr>
                     </table>

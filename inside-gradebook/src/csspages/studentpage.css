@@ -4,6 +4,9 @@
 
 .userProfileImageLeft{
     border-radius: 50%;
+    width: 200px;
+    height: 210px;
+
     padding: 10px 10px 10px 10px;
 }
 

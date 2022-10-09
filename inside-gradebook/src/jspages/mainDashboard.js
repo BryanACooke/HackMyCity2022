@@ -16,11 +16,13 @@ const [error, setError] = useState(null);
 const [loading, setLoading] = useState(false);
 const [response, setResponse] = useState("");
 const [studentList, setStudentList] = useState("");
+const [studentListTwo, setStudentListTwo] = useState("");
 
 
 let navigate = useNavigate();
 
-function viewMoreStudent(id){
+
+function viewMoreButton(id){
     navigate("/studentPage", {state:{id}});
 
 }
@@ -28,16 +30,14 @@ function viewMoreStudent(id){
 
 
 
-
  function getData() {
     setLoading(true);
-    axios.get("http://10.12.55.219:1234/getAllStudents", {
+    axios.get("http://localhost:1234/getAllStudents", {
     }).then(function (response) {
         setStudentList(response.data.student);
         setResponse(response.data);
         setError(null);
         setLoading(false);
-        console.log(studentList);
         // handle success
     }).catch(function (error) {
         // handle error
@@ -48,9 +48,29 @@ function viewMoreStudent(id){
 }
 
 
+function loadProfile() {
+    setLoading(true);
+    axios.get("http://localhost:1234/searchDatabase", {
+    }).then(function (response) {
+        setStudentListTwo(response.data.student);
+        console.log(studentList);
+        setResponse(response.data);
+        setError(null);
+        setLoading(false);
+        console.log(studentListTwo);
+        // handle success
+    }).catch(function (error) {
+        // handle error
+        console.log(error);
+    })
+        .then(function (response) {
+        });
+}
+
 
 useEffect( () => {
     getData();
+    loadProfile();
     
 }, [])
 
@@ -65,7 +85,7 @@ useEffect( () => {
             <div className="teacherDetailTop">
                 <div className="teacherProfileInformation">
                     <div className="teacherProfilePicture">
-                        <img className="teacherProfilePhoto" src="./imgres/bcookepfp.jpg" alt="Profile Picture" />
+                        <img className="teacherProfilePhoto" src="./imgres/JeffreyWilson.jpg" alt="Profile Picture" />
                         </div>
                     <div className="teacherName">
 
@@ -125,40 +145,33 @@ useEffect( () => {
         <div className="studentLists">
             <div className="studentAlertListTop">
                 <h1 className="studentAlertListTitle">Student Alerts</h1>
-                <h1 className="studentNameText">{studentList.Name}</h1>
                 <Table className="studentTableList"> 
                     <tbody>
-                    {studentList && studentList.map(searchResults => {    
-                                     console.log(studentList);        
-                                     return (
-                        
-                     
-                                   
                         <tr>
-                            <td >
+                            <td>
                                 <div className="studentGrade" style={{backgroundColor: gradeColors.Red,  borderRadius: 4}}>
-                                <h1 className="studentGradeText"> {searchResults.Letter} </h1>
-                                <h1 className="studentGradeTextSubtitle"> {searchResults.Rating + "%"} </h1>
+                                <h1 className="studentGradeText"> F </h1>
+                                <h1 className="studentGradeTextSubtitle"> 42% </h1>
                                 </div>
                             </td>
-
                             <td><div className="studentProfilePicture">
-                            <img className="studentProfilePhoto" src= {"../imgres/faces/" +  searchResults.Name + ".jpg"} alt="Profile Picture" />
-                                </div>
-                                </td> 
+                                 <img className="studentProfilePhoto" src="./imgres/JeffRoberts.jpg" alt="Profile Picture" />
+                                </div></td> 
+                            <td>
+                        <h1 className="studentNameText">Jeff Roberts</h1>
 
-                        <td>
-                            <h1 className="studentNameText">{searchResults.Name}</h1>
-                                <div className="studentGradeLevel">
-                                 <h1 className="studentGradeLevelText">Grade 12</h1>
-                                    <Button className="viewMoreButtonStudent">View Student</Button>
-                                </div> 
+                        <div className="studentGradeLevel">
+                            <h1 className="studentGradeLevelText">Grade 12</h1>
+                            <Button className="viewMoreButtonStudent">View Student</Button>
+                        </div> 
                             </td>
-                        <td>
-                        <div className="studentRatingDiv">
-                        <div className="studentRatingLogo">
-                             <img className="studentRatingLogoIcon" src="../imgres/icons8-error-96.png" alt="Rating Logo" />
-                        <div className="studentRatingTextDiv">
+                            <td>
+                            <div className="studentRatingDiv">
+                    <div className="studentRatingLogo">
+                        <img className="studentRatingLogoIcon" src="../imgres/icons8-error-96.png" alt="Rating Logo" />
+
+                    <div className="studentRatingTextDiv">
+                        
                         <h1 className="studentRatingText">Needs Attention</h1>
                         <ul>
                         <li className="studentTag">Math</li>
@@ -170,11 +183,7 @@ useEffect( () => {
                     </div>
                 </div>
                      </td>
-                     </tr>
-                                     )
-                                })}
-                            
-                        
+                        </tr>
                     </tbody>
                     </Table>
                 </div>
@@ -205,10 +214,10 @@ useEffect( () => {
                                      console.log(studentList);        
                                      return (
                         <tr>
-                            <td>
-                                <div className="studentGrade" style={{backgroundColor: gradeColors.Red,  borderRadius: 4}}>
-                                <h1 className="studentGradeText"> F </h1>
-                                <h1 className="studentGradeTextSubtitle"> 42% </h1>
+                            <td key={searchResults.id}>
+                                <div className="studentGrade" >
+                                <h1 className="studentGradeText"> {searchResults.Letter} </h1>
+                                <h1 className="studentGradeTextSubtitle"> {searchResults.Rating+ "%"} </h1>
                                 </div>
                             </td>
                             <td>
@@ -219,7 +228,15 @@ useEffect( () => {
                         <h1 className="studentNameText">{searchResults.Name}</h1>
                         <div className="studentGradeLevel">
                             <h1 className="studentGradeLevelText">Grade 12</h1>
-                            <Button className="viewMoreButtonStudent">View Student</Button>
+                            <Button key={searchResults.id}  className="viewMoreButtonStudent "
+                                                     value={searchResults}
+                                                     onClick={() => viewMoreButton(searchResults.id)}
+                                                 >
+                                                     <div className="viewMoreButtonStudent ">
+                                                         View Student!                                                         
+                                                             </div>
+                                                     
+                                                 </Button> 
                         </div>  
                             </td>
                             <td>

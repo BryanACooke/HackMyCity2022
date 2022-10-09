@@ -1,6 +1,6 @@
 [
 	{
-		"_id": 1,
+		"id": 1,
 		"Image": "https://lumiere-a.akamaihd.net/v1/images/character_themuppets_kermit_b77a431b.jpeg",
 		"Name": "Jeffrey Wilson",
 		"Class": [
@@ -23,13 +23,13 @@
 				"Enlightenment",
 				"American Revolution"
 			]
-		]
+		],
 		"Rating": 92,
 		"Letter":  "A"
 
 	},
 	{
-		"_id": 2,
+		"id": 2,
 		"Image": "https://lumiere-a.akamaihd.net/v1/images/character_themuppets_kermit_b77a431b.jpeg",
 		"Name": "Angelina McCaffrey",
 		"Class": [
@@ -59,7 +59,7 @@
 		"Letter": "D"
 	},
 	{
-		"_id": 3,
+		"id": 3,
 		"Image": "https://lumiere-a.akamaihd.net/v1/images/character_themuppets_kermit_b77a431b.jpeg",
 		"Name": "Andrew Simonson",
 		"Class": [
@@ -87,7 +87,7 @@
 		"Letter": "A"
 	},
 	{
-		"_id": 4,
+		"id": 4,
 		"Image": "https://lumiere-a.akamaihd.net/v1/images/character_themuppets_kermit_b77a431b.jpeg",
 		"Name": "Eliza Berth",
 		"Class": [
@@ -106,7 +106,7 @@
 		"Letter": "D"
 	},
 	{
-		"_id": 5,
+		"id": 5,
 		"Image": "https://lumiere-a.akamaihd.net/v1/images/character_themuppets_kermit_b77a431b.jpeg",
 		"Name": "Alexa Vanegas",
 		"Class": [
@@ -131,7 +131,7 @@
 	},
 
 	{
-		"_id": 6,
+		"id": 6,
 		"Image": "https://lumiere-a.akamaihd.net/v1/images/character_themuppets_kermit_b77a431b.jpeg",
 		"Name": "Harriet Burman",
 		"Class": [
@@ -163,7 +163,7 @@
 	},
 
 	{
-		"_id": 7,
+		"id": 7,
 		"Image": "https://lumiere-a.akamaihd.net/v1/images/character_themuppets_kermit_b77a431b.jpeg",
 		"Name": "Amelia Davis",
 		"Class": [
@@ -186,7 +186,7 @@
 	},
 
 	{
-		"_id": 8,
+		"id": 8,
 		"Image": "https://lumiere-a.akamaihd.net/v1/images/character_themuppets_kermit_b77a431b.jpeg",
 		"Name": "Phil Andrews",
 		"Class": [
@@ -215,7 +215,7 @@
 	},
 
 	{
-		"_id": 9,
+		"id": 9,
 		"Image": "https://lumiere-a.akamaihd.net/v1/images/character_themuppets_kermit_b77a431b.jpeg",
 		"Name": "Gustavo Dixon",
 		"Class": [
@@ -240,7 +240,7 @@
 	},
 
 	{
-		"_id": 10,
+		"id": 10,
 		"Image": "https://lumiere-a.akamaihd.net/v1/images/character_themuppets_kermit_b77a431b.jpeg",
 		"Name": "Dave Robbins",
 		"Class": [
@@ -265,7 +265,7 @@
 	},
 
 	{
-		"_id": 11,
+		"id": 11,
 		"Image": "https://lumiere-a.akamaihd.net/v1/images/character_themuppets_kermit_b77a431b.jpeg",
 		"Name": "Karen Murphy",
 		"Class": [
@@ -296,7 +296,7 @@
 	},
 
 	{
-		"_id": 12,
+		"id": 12,
 		"Image": "https://lumiere-a.akamaihd.net/v1/images/character_themuppets_kermit_b77a431b.jpeg",
 		"Name": "Darren Klein",
 		"Class": [
@@ -319,7 +319,7 @@
 	},
 
 	{
-		"_id": 13,
+		"id": 13,
 		"Image": "https://lumiere-a.akamaihd.net/v1/images/character_themuppets_kermit_b77a431b.jpeg",
 		"Name": "Erin Prince",
 		"Class": [
@@ -344,7 +344,7 @@
 	},
 
 	{
-		"_id": 14,
+		"id": 14,
 		"Image": "https://lumiere-a.akamaihd.net/v1/images/character_themuppets_kermit_b77a431b.jpeg",
 		"Name": "Regina Jackson",
 		"Class": [
@@ -373,7 +373,7 @@
 	},
 
 	{
-		"_id": 15,
+		"id": 15,
 		"Image": "https://lumiere-a.akamaihd.net/v1/images/character_themuppets_kermit_b77a431b.jpeg",
 		"Name": "Elle Stevens",
 		"Class": [

@@ -244,24 +244,18 @@
 }
 
 .classTextButton{
-    outline: 0;
-    background-color: transparent;
-    color: black;
-    border: 0;
+    
 }
 .classTextButton:hover{
-    outline: 0;
-    color: black;
-    background-color: transparent;
-    border: 0;
+
 
 }
 .classTextButton:active{
-    outline: 0;
-    color: black;
-    background-color: transparent;
-    border: 0;
 
+
+}
+.viewMoreButtonStudent {
+        
 }
 
 
@@ -276,19 +270,7 @@
 .studentButtonNextName{
 }
 
-.viewMoreButtonStudent{
-    width: 10vw;
-    height: 5vh;
-}
 
-.viewMoreButtonStudent:active{
-
-}
-
-
-.viewMoreButtonStudent:hover{
-
-}
 
 
 .footer {
