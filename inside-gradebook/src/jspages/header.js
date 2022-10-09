@@ -26,8 +26,7 @@ function Header(){
         </Form>
   <h1 class="navBreaker">|</h1>
        <Navbar.Text id="textSignedInAs"><div id="bothTexts"><div id="firstText">Signed in as: </div>John Doe<div id="break">
-       <Link to="/UserProfile"></Link>
-       </div> </div><Link to="/UserProfile"><div id="profilePicture">
+       </div> </div><Link to="/mainDashboard"><div id="profilePicture">
        <img id="imgProfilePicture" src="https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png"
           width="55"
           height="55"
