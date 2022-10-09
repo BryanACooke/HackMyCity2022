@@ -8,17 +8,24 @@
 				"English",
 				"History"
 			],
-			"Grade": [
-				92,
-				83,
-				100
-			],
-			"GradeClass": [
-				"Spanish"
-
+			"Grades": [
+				[
+					92,
+					83,
+					100
+				],
+				[
+					"English",
+					"History",
+					"History"
+				],
+				[
+					"Verbs",
+					"Enlightenment",
+					"American Revolution"
+				]
 			]
-			
-		},
+			},
 		{
 			"_id": 2,
 			"StudentID": 2,
@@ -28,13 +35,24 @@
 				"Math",
 				"History"
 			],
-			"Grade": [
-				64,
-				25,
-				89,
-				73,
-				98,
-				46
+			"Grades": [
+				[
+					64,
+					25,
+					89,
+					73,
+					98,
+					46
+				],
+				[ "Math", "Math", "Math", "Math", "History", "History" ],
+				[
+					"Addition",
+					"Addition",
+					"Multiplication",
+					"Multiplication",
+					"Enlightenment",
+					"American Revolution"
+				]
 			]
 		},
 		{
@@ -46,12 +64,22 @@
 				"Math",
 				"Science"
 			],
-			"Grade": [
-				100,
-				97,
-				85,
-				100,
-				100
+			"Grades": [
+				[
+					100,
+					97,
+					85,
+					100,
+					100
+				],
+				[ "Math", "Math", "Math", "Math", "Science", "Science" ],
+				[
+					"Addition",
+					"Addition",
+					"Multiplication",
+					"Multiplication",
+					"Geology"
+				]
 			]
 		},
 		{
@@ -63,9 +91,11 @@
 				"Science",
 				"English"
 			],
-			"Grade": [
-				81,
-				45
+			"Grades": [
+				[
+					81,
+					45
+				],["Science","English"],["Geology","Verbs"]
 			]
 		},
 		{
@@ -77,10 +107,18 @@
 				"Science",
 				"History"
 			],
-			"Grade": [
-				63,
-				62,
-				85
+			"Grades": [
+				[
+					63,
+					62,
+					85
+				],
+				[ "Science", "History", "History" ],
+				[
+					"Geology",
+					"Enlightenment",
+					"American Revolution"
+				]
 			]
 		}
 	]
