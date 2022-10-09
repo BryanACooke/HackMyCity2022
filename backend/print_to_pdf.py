@@ -3,7 +3,6 @@ from pymongo import MongoClient
 from bson import json_util
 
 
-
 DB_NAME = 'Gradebook'
 COLLECTION_STUDENTS = 'Students'
 COLLECTION_GRADES = 'Grades'
@@ -31,41 +30,43 @@ coll_a = db[COLLECTION_ASSIGNMENTS] #selecting the assignments in the database
 printer = pprint.PrettyPrinter()
 
 def find_all_students():
-     students = coll1.find() 
+     students = coll_s.find() 
 
      for student in students:
          printer.pprint(student)
 
-# find_all_students()
+#find_all_students()
 
-def find_s43():
-    tim = coll1.find_one({"StudentID": 43, "ClassID": 18, })
-    printer.pprint(tim)
+def print_grades():
+    #students = coll_s.find({"_id": 1}) 
 
-#find_s43()
+    # for gradeIDnum in coll_s.find( {"_id": 1},{"GradeID": 1, "_id":0}) :
+    #     print(gradeIDnum)
+    #     grades = coll_g.find({"_id": gradeIDnum},{"Score": 1, "_id":0})
+    #     for grade in grades:
+    #         printer.pprint(grade)
+    results = coll_s.aggregate([
+        {
+            '$lookup': {
+                'from': 'coll_g', 
+                'localField': 'GradeID', 
+                'foreignField': '_id', 
+                'as': 'All'
+            }
+        }, { '$match' : { "All" : { '$ne' : []}}}
+    ])
+    printer.pprint(results)
+    for result in results:
+         printer.pprint(result)
+         
+
+print_grades()
 
 def count_all_students():
-    count = coll1.count_documents(filter={})
+    count = coll_s.count_documents(filter={})
     print(count)
 
 #count_all_students()
-
-# def get_score_range(min_score, max_score):
-#    # query = coll1.find({"scores": {"score": 87.50309579619501}})
-
-        
-#     # query = {"$and": [
-#     #     {"score": {"$gte": min_score}},
-#     #     {"score": {"$lte": max_score}}
-#     # ]}
-#     # print("x")
-#     # students = coll1.find(query).sort("score") 
-#     # print("2")
-#     # for studen:
-#     #     printer.pprint(student)
-#         # print("1")
-    
-# get_score_range(1.0,100.0)
 
 class_id = 29
 #Search students by class 
@@ -99,52 +100,4 @@ def search_students_by_assignments():
 #search_students_by_id() 
 #search_students_by_assignment()
 
-#get student average score
-
-def get_scores():
-    student_id = 1
-    pipeline =  [
-        {
-            "$match": {
-                "StudentID": student_id, "ClassID": 4
-            }
-        }
-    ]
-    grades = db.coll_s.aggregate(pipeline)
-    print("x")
-    for itr in grades:
-        print("y")
-        print(itr)   
-    pipeline = [{'$lookup': 
-                    {'from' : 'models',
-                    'localField' : '_id',
-                    'foreignField' : 'references',
-                    'as' : 'cellmodels'}},
-                {'$unwind': '$cellmodels'},
-                {'$match':
-                    {'authors' : 'Migliore M', 'cellmodels.celltypes' : 'Hippocampus CA3 pyramidal cell'}},
-                {'$project': 
-                    {'authors':1, 'cellmodels.celltypes':1}} 
-                ]
-
-for doc in (papers.agg
-
-    
-])
-
-    # grades = coll_g.find({"scores", "class_id": class_id})
-    # print("1")
-    # for itr in grade
-    #     print(itr)    
-
-get_scores()
-
-#get student's performance level: on track/needs attention
-def get_student_status():
-    pass
-
-#generating student report
-
-def print_student_report():
-    pass
 
