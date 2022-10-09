@@ -99,13 +99,24 @@ def search_students_by_assignments():
 #search_students_by_assignment()
 
 #get student average score
+
 def get_scores():
-    grades = coll1.find({"grades": assignment_id, "class_id": class_id})
+    student_id = 1
+    db.coll_s.aggregate(
+        { $match : ("student_id": student_id, "class_id": 4,  )}
+    )
+    # grades = coll_g.find({"scores", "class_id": class_id})
+    # print("1")
+    # for itr in grade
+    #     print("2")
+    #     print(itr)
+    #     print("3")
     
-    pass
+    print("4")
+get_scores()
 
 #get student's performance level: on track/needs attention
-def get_student_status()
+def get_student_status():
     pass
 
 #generating student report
