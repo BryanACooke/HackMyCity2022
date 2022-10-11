@@ -1,4 +1,4 @@
-# HackMyCity2022 - South Florida Tech Hub HackMyCity 2022 Hackathon.
+# HackMyCity2022 - South Florida Tech Hub 
 
 
 # Inside The Gradebook 
